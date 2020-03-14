@@ -1,0 +1,4 @@
+wheel
+jupyter-notebook
+pandas
+matplotlib
