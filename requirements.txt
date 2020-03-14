@@ -2,3 +2,4 @@ wheel
 jupyter-notebook
 pandas
 matplotlib
+django
