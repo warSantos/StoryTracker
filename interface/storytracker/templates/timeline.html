@@ -11,17 +11,6 @@
 {% block scripts %}
 <!-- Coloque seus scripts aqui. -->
 <script type="text/javascript">
-    var timeline_json = $.getJSON("{% static 'json/timeline3.json' %}", function(json) {
-        meujson = json;
-        return meujson;
-    });
-    console.log(timeline_json);
-    //make_the_json(); // replace make_the_json() with the JSON object you created
-    // two arguments: the id of the Timeline container (no '#')
-    // and the JSON object or an instance of TL.TimelineConfig created from
-    // a suitable JSON object
-    //window.timeline = new TL.Timeline('timeline-embed', timeline_json);
-    timeline = new TL.Timeline('timeline-embed',
-    "{% static 'json/timeline3.json' %}");
+    timeline = new TL.Timeline('timeline-embed', "{% static 'json/timeline-teste.json' %}");
   </script>
 {% endblock %}
