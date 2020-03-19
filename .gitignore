@@ -2,6 +2,7 @@
 dados
 .vscode
 amb
+*doc2vec.*
 
 # Django #
 *.log
