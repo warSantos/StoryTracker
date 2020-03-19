@@ -1,5 +1,6 @@
 wheel
-jupyter-notebook
+jupyterlab
 pandas
 matplotlib
 django
+gensim
