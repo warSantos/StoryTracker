@@ -24,23 +24,33 @@ class Modelo():
                 if p not in stpw:
                     doc.append(p)
             documentos.append(TaggedDocument(
-                words=doc, tags=['DOC_%s' % index]))
+                words=doc, tags=['DOC_'+str(index)]))
         return documentos
 
-    def treinar(self, dataset, atributo):
+    def treinar(self, documentos, atributo, dim, tipo, epocas):
 
-        documentos = self.pre_proc(dataset, atributo)
-        modelo = Doc2Vec(vector_size=100, window=10, min_count=1, alpha=0.025, min_alpha=0.025, workers=20)
+        config = atributo+'_'+str(tipo)+'_'+str(dim)+'_'+str(epocas)
+        print("MODELO COM CONFIGURAÇÃO: ", config)
+        modelo = Doc2Vec(vector_size=dim, dm=tipo, window=10, min_count=1, alpha=0.025, min_alpha=0.025, workers=20)
         modelo.build_vocab(documentos)
-        for epoca in range(10):
+        for epoca in range(epocas):
             modelo.train(documentos, total_examples=modelo.corpus_count, epochs=1)
             modelo.alpha -= 0.002
             modelo.min_alpha = modelo.alpha
+        modelo.save('modelos/doc2vec.'+config)
 
-        modelo.save('modelos/doc2vec.'+atributo)
-
+    def gerar_modelos(self, dataset, atributo):
+        
+        dimensoes = [100, 300]
+        tipos = [0, 1]
+        epocas = [10]
+        documentos = self.pre_proc(dataset, atributo)
+        for dim in dimensoes:
+            for tipo in tipos:
+                for epoca in epocas:
+                    self.treinar(documentos, atributo, dim, tipo, epoca)
 
 if __name__ == '__main__':
 
     m = Modelo()
-    m.treinar(argv[1], argv[2])
+    m.gerar_modelos(argv[1], argv[2])
