@@ -31,7 +31,7 @@ class Classificador():
         for cat in categorias_finais:
             docs_sem_classif = docs_sem_classif[docs_sem_classif['category'] != cat]
         
-        return docs_classif.sample(frac=1), docs_sem_classif.sample(frac=1)
+        return docs_classif, docs_sem_classif
     
     def dataset_treino(self, docs_classif, docs_sem_classif, modelo):
 
@@ -55,11 +55,19 @@ class Classificador():
             except:
                 print("GENÉRICOS: ", index)
         
+        """
         d = {'vetor': vetores_treino, 'classe': classes_treino}
         df_class = pd.DataFrame(d)
         d = {'vetor': vetores_teste, 'classe': classes_teste}
         df_noclass = pd.DataFrame(d)
         return df_class, df_noclass
+        """
+
+        docs_classif["vetor"] = vetores_treino
+        docs_classif["classe"] = classes_treino
+        docs_sem_classif["vetor"] = vetores_teste
+        docs_sem_classif["classe"] = classes_teste
+
 
     def cross_valid(self, clf, vetores, classes):
 
@@ -67,7 +75,7 @@ class Classificador():
             cv=5, scoring='f1_macro')    
         print("F1-Measure: ", scores)
 
-    def classificar(self, treino, alg):
+    def treinar(self, treino, alg):
         
         vetores = list()
         classes = list()
@@ -87,19 +95,60 @@ class Classificador():
                 hidden_layer_sizes=(100, 1), random_state=1, learning_rate= 'adaptive')
         else:
             clf = RandomForestClassifier(max_depth=2, random_state=0)
-        
+            
         self.cross_valid(clf, vetores, classes)
 
-    def executar(self, dataset, caminho_modelo, alg):
+    def classificar(self, treino, teste, alg):
+        
+        # Regressão Logistica.
+        if alg == 1:
+            clf = LogisticRegression(random_state=0, max_iter=150, solver='sag')#, C=0.8)
+        # Naive Bayes.
+        elif alg == 2:
+            clf = GaussianNB()
+        # Rede Neural.
+        elif alg == 3:
+            clf = MLPClassifier(solver='sgd', alpha=1e-5,\
+                hidden_layer_sizes=(100, 1), random_state=1, learning_rate= 'adaptive', max_iter=300)
+        else:
+            clf = RandomForestClassifier(max_depth=2, random_state=0)
+        
+        # Treinando o modelo.
+        vetores = list()
+        classes = list()
+        for index, row in treino.iterrows():
+            vetores.append(row['vetor'])
+            classes.append(row['classe'])
+        
+        clf.fit(vetores, classes)
+
+        # Classificando as novas amostras.
+        vetores = list()
+        for index, row in teste.iterrows():
+            vetores.append(row['vetor'])
+        classificados = clf.predict(vetores)
+        
+        return classificados
+
+
+    def executar(self, dataset, caminho_modelo, operacao='treinar', alg=1):
 
         modelo = Doc2Vec.load(caminho_modelo)
         df = pd.read_csv(dataset)
         docs_classif, docs_sem_classif = self.pre_proc(df)
-        treino, teste = self.dataset_treino(docs_classif, docs_sem_classif, modelo)
-        self.classificar(treino, alg)
+        #treino, teste = self.dataset_treino(docs_classif, docs_sem_classif, modelo)
+        self.dataset_treino(docs_classif, docs_sem_classif, modelo)
+        if operacao == 'treinar':
+            #self.treinar(treino, alg)
+            self.treinar(docs_classif, alg)
+        elif operacao == 'classif':
+            #classificados = self.classificar(treino, teste, alg)
+            classificados = self.classificar(docs_classif, docs_sem_classif, alg)
+            # Persistindo o novo dataframe com documentos classificados.
+
     
 if __name__=='__main__':
 
     c = Classificador()
-    c.executar(argv[1], argv[2], int(argv[3]))
+    c.executar(argv[1], argv[2], argv[3], int(argv[4]))
     
