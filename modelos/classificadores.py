@@ -54,20 +54,10 @@ class Classificador():
                 classes_teste.append(row['category'])
             except:
                 print("GENÉRICOS: ", index)
-        
-        """
-        d = {'vetor': vetores_treino, 'classe': classes_treino}
-        df_class = pd.DataFrame(d)
-        d = {'vetor': vetores_teste, 'classe': classes_teste}
-        df_noclass = pd.DataFrame(d)
-        return df_class, df_noclass
-        """
 
         docs_classif["vetor"] = vetores_treino
         docs_classif["classe"] = classes_treino
         docs_sem_classif["vetor"] = vetores_teste
-        docs_sem_classif["classe"] = classes_teste
-
 
     def cross_valid(self, clf, vetores, classes):
 
@@ -76,12 +66,6 @@ class Classificador():
         print("F1-Measure: ", scores)
 
     def treinar(self, treino, alg):
-        
-        vetores = list()
-        classes = list()
-        for index, row in treino.iterrows():
-            vetores.append(row['vetor'])
-            classes.append(row['classe'])
 
         # Regressão Logistica.
         if alg == 1:
@@ -96,7 +80,7 @@ class Classificador():
         else:
             clf = RandomForestClassifier(max_depth=2, random_state=0)
             
-        self.cross_valid(clf, vetores, classes)
+        self.cross_valid(clf, list(treino['vetor']), list(treino['classe']))
 
     def classificar(self, treino, teste, alg):
         
@@ -113,38 +97,26 @@ class Classificador():
         else:
             clf = RandomForestClassifier(max_depth=2, random_state=0)
         
-        # Treinando o modelo.
-        vetores = list()
-        classes = list()
-        for index, row in treino.iterrows():
-            vetores.append(row['vetor'])
-            classes.append(row['classe'])
-        
-        clf.fit(vetores, classes)
+        clf.fit(list(treino['vetor']), list(treino['classe']))
 
         # Classificando as novas amostras.
-        vetores = list()
-        for index, row in teste.iterrows():
-            vetores.append(row['vetor'])
-        classificados = clf.predict(vetores)
-        
-        return classificados
-
+        classificados = clf.predict(list(teste['vetor']))
+        teste["classe"] = classificados
+        ndf_teste = teste.drop(columns=['vetor'])
+        ndf_treino = treino.drop(columns=['vetor'])
+        ndf = pd.concat([ndf_treino, ndf_teste]).sort_index()
+        ndf.to_csv('../dados/classficados.csv', index=False)
 
     def executar(self, dataset, caminho_modelo, operacao='treinar', alg=1):
 
         modelo = Doc2Vec.load(caminho_modelo)
         df = pd.read_csv(dataset)
         docs_classif, docs_sem_classif = self.pre_proc(df)
-        #treino, teste = self.dataset_treino(docs_classif, docs_sem_classif, modelo)
         self.dataset_treino(docs_classif, docs_sem_classif, modelo)
         if operacao == 'treinar':
-            #self.treinar(treino, alg)
             self.treinar(docs_classif, alg)
         elif operacao == 'classif':
-            #classificados = self.classificar(treino, teste, alg)
-            classificados = self.classificar(docs_classif, docs_sem_classif, alg)
-            # Persistindo o novo dataframe com documentos classificados.
+            self.classificar(docs_classif, docs_sem_classif, alg)
 
     
 if __name__=='__main__':
