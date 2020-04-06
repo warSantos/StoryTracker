@@ -75,8 +75,8 @@ class Classificador():
             clf = GaussianNB()
         # Rede Neural.
         elif alg == 3:
-            clf = MLPClassifier(solver='sgd', alpha=1e-5,\
-                hidden_layer_sizes=(100, 1), random_state=1, learning_rate= 'adaptive')
+            clf = MLPClassifier(solver='adam', hidden_layer_sizes=(10,10), learning_rate_init=0.002, \
+                    learning_rate= 'adaptive', max_iter=200)
         else:
             clf = RandomForestClassifier(max_depth=2, random_state=0)
             
@@ -92,8 +92,8 @@ class Classificador():
             clf = GaussianNB()
         # Rede Neural.
         elif alg == 3:
-            clf = MLPClassifier(solver='sgd', alpha=1e-5,\
-                hidden_layer_sizes=(100, 1), random_state=1, learning_rate= 'adaptive', max_iter=300)
+            clf = MLPClassifier(solver='adam', alpha=1e-5,\
+                hidden_layer_sizes=(100, 2), random_state=1, learning_rate= 'adaptive', max_iter=300)
         else:
             clf = RandomForestClassifier(max_depth=2, random_state=0)
         
@@ -105,7 +105,7 @@ class Classificador():
         ndf_teste = teste.drop(columns=['vetor'])
         ndf_treino = treino.drop(columns=['vetor'])
         ndf = pd.concat([ndf_treino, ndf_teste]).sort_index()
-        ndf.to_csv('../dados/classficados.csv', index=False)
+        ndf.to_csv('../dados/classificados.csv', index=False)
 
     def executar(self, dataset, caminho_modelo, operacao='treinar', alg=1):
 
