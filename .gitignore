@@ -2,7 +2,8 @@
 dados
 .vscode
 amb
-
+*doc2vec*
+*.tar.gz
 # Django #
 *.log
 *.pot

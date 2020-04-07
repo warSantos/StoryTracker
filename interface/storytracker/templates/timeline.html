@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Story Tracker - Folha de SP {% endblock %}
+
+{% block content %}
+<div class="bg-dark input-group rounded-pill p-1" style="height: 10vh;">
+    <div class="w-50 p-3 d-flex flex-row">
+        <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon3"
+            class="form-control bg-none border-0">
+            <button type="button" class="btn btn-info ml-1">
+                <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+    </div>
+</div>
+<div id='timeline-embed' style="width: 100%; height: 90vh;"></div>
+
+{% endblock %}
+{% block scripts %}
+<!-- Coloque seus scripts aqui. -->
+<script type="text/javascript">
+    timeline = new TL.Timeline('timeline-embed', "{% static 'json/timeline-teste.json' %}");
+</script>
+{% endblock %}
