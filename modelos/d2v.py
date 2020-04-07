@@ -29,7 +29,7 @@ class Modelo():
 
     def treinar(self, documentos, atributo, dim, tipo, epocas):
 
-        config = atributo+'_'+str(tipo)+'_'+str(dim)+'_'+str(epocas)
+        config = 'classificados_'+atributo+'_'+str(tipo)+'_'+str(dim)+'_'+str(epocas)
         print("MODELO COM CONFIGURAÇÃO: ", config)
         modelo = Doc2Vec(vector_size=dim, dm=tipo, window=10, min_count=1, alpha=0.025, min_alpha=0.025, workers=20)
         modelo.build_vocab(documentos)
@@ -41,7 +41,7 @@ class Modelo():
 
     def gerar_modelos(self, dataset, atributo):
         
-        dimensoes = [100, 300]
+        dimensoes = [100]
         tipos = [0, 1]
         epocas = [10]
         documentos = self.pre_proc(dataset, atributo)
