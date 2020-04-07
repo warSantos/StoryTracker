@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Story Tracker - Folha de SP {% endblock %}
+
+{% block content %}
+
+<div class="bg-secondary input-group rounded-pill p-3" style="height: 9vh;">
+    <div class="w-50 d-flex flex-row">
+        <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon3"
+            class="form-control bg-none border-0">
+        <button type="button" class="btn btn-info ml-1">
+            <span class="glyphicon glyphicon-search"></span> Search
+        </button>
+    </div>
+    <div class="d-flex flex-row">
+        <label for="example-date-input" class="col-2 col-form-label">Date</label>
+        <div class="col-9">
+            <input class="form-control" type="date" value="2016-04-01" id="example-date-input">
+        </div>
+    </div>
+</div>
+<div class="bg-dark input-group rounded-pill p-2" style="height: 7vh;">
+    <p class="text-light mr-4 p-1">Advanced Search</p>
+    <div class="mr-5">
+        <label for="customRange3 "><span class="badge badge-dark">Title Importance</span>
+            <input type="range" class="custom-range" min="0" max="1" value="1" step="0.1" id="customRange3">
+            <span class="badge badge-dark">Text Importance</span></label>
+    </div>
+    <div class="w-25 d-flex">
+        <div class="d-flex">
+            <label for="months" class="col-4 col-form-label "><span class="badge badge-dark">Months:</span></label>
+            <div class="col-6">
+                <input class="form-control" type="number" value="3" id="months" min="1" max="10">
+            </div>
+        </div>
+        <div class="d-flex">
+            <label for="files" class="col-3 col-form-label"><span class="badge badge-dark">Files:</span></label>
+            <div class="col-6">
+                <input class="form-control" type="number" value="5" id="files" min="3" max="10">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w-50 p-4">
+    <h3> Configuração de Parâmetros </h3>
+    <p>
+        <b>Title x Text Importance:</b> este parâmetro varia no intervalo [0,1]. Este parâmetro equilibra a pesquisa por
+        páginas entre o termos pesquisados com o título e o texto dos documentos. O valor padão atribui total
+        importância para o texto dos documentos, valor 1.
+    </p>
+    <p>
+        <b> Months:</b> este parâmetro define o ráio de pesquisa em mêses para um ponto no tempo. Supondo que a data
+        inserida seja 2016-04-01, com raio de 3 mêses, a linha do tempo será construída a partir de 3 da data inserida e
+        até 3 mêses após a data inserida, 2016-01-01 á 2016-06-31, respectivamente.
+    </p>
+</div>
+{% endblock %}
+{% block scripts %}
+<!-- Coloque seus scripts aqui. -->
+
+{% endblock %}
