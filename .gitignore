@@ -2,6 +2,9 @@
 dados
 .vscode
 amb
+*doc2vec.*
+distancias
+*.tar.gz
 
 # Django #
 *.log

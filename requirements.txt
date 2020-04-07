@@ -1,4 +1,7 @@
 wheel
+jupyterlab
 pandas
 matplotlib
+sklearn
 django
+gensim
