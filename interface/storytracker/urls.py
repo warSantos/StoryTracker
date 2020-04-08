@@ -6,5 +6,6 @@ from storytracker.views import (
 
 
 urlpatterns = [
-    path('', TimeLine.home, name='home'),
+    path('', TimeLine.filtros, name='filtros'),
+    path('timeline/', TimeLine.timeline, name='timeline'),
 ]

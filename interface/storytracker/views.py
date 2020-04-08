@@ -5,6 +5,10 @@ from django.db import models
 
 class TimeLine():
 
-    def home(request):
+    def filtros(request):
+
+        return render(request, 'filtros.html')
+
+    def timeline(request):
 
         return render(request, 'timeline.html')
