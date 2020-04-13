@@ -5,4 +5,7 @@ matplotlib
 sklearn
 django
 gensim
-postgress
+postgres
+libpq-dev
+psycopg2-binary
+pysycopg2
