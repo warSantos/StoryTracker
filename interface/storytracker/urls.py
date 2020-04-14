@@ -8,6 +8,6 @@ from storytracker.views import (
 
 urlpatterns = [
     path('', TimeLine.filtros, name='filtros'),
-    path('pageranking/<str:texto>/<str:data>/', Ranking.ranking, name='pageranking'),
+    path('pageranking/', Ranking.ranking, name='pageranking'),
     path('timeline/', TimeLine.timeline, name='timeline'),
 ]

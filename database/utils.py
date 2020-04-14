@@ -20,12 +20,16 @@ class Utils():
 
         return db
 
-    def conectar(self):
+    def conectar(self, confs=None):
 
         conn = None
         try:
             # read connection parameters
-            params = self.config()
+            params = None
+            if confs is None:
+                params = self.config()
+            else:
+                params = self.config(confs)
 
             # connect to the PostgreSQL server
             print('Connecting to the PostgreSQL database...')
