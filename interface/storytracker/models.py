@@ -46,7 +46,7 @@ class PageRanking(models.Model):
             comparacoes.append([str(id_doc[0]), 1-score])
         comparacoes.sort(key=lambda x: x[1], reverse=True)
         # Resgatando os documentos mais parecidos.
-        valores = ','.join([t[0] for t in comparacoes[:9]])
+        valores = ','.join([t[0] for t in comparacoes[:12]])
         sql = "SELECT * FROM "+tab_nome+" WHERE id_documento IN ("+valores+")"
         cursor.execute(sql)
         # Criando json de resposta.
