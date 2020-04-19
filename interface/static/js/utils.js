@@ -4,6 +4,8 @@ function criarModal(documento) {
     card = document.createElement("div");
     card.classList.add("w3-card-4");
     card.classList.add("w-25");
+    card.classList.add("rounded");
+    card.classList.add("m-1");
     // Configurando o header com a classe do documento.
     h = document.createElement("header");
     classe = document.createElement("h1");
@@ -22,7 +24,10 @@ function criarModal(documento) {
     rodape.classList.add("w3-container");
     rodape.classList.add("w3-light-blue");
     texto_rodape = document.createElement("p");
-    texto_rodape.innerHTML = "Click to see the fulll text..."
+    texto_underscore = document.createElement("a");
+    texto_underscore.innerHTML = "See more..."
+    texto_underscore.href = '#';
+    texto_rodape.appendChild(texto_underscore);
 
     // Adicionando o moda com o texto no documento.
     modal = document.createElement("div");
@@ -37,7 +42,7 @@ function criarModal(documento) {
     header_modal = document.createElement("header");
     header_modal.classList.add("w3-container");
     header_modal.classList.add("w3-light-blue");
-    h_titulo = document.createElement("h2");
+    h_titulo = document.createElement("h3");
     h_titulo.innerHTML = documento.titulo;
     fechar = document.createElement("span");
     fechar.classList.add("w3-button");
@@ -51,8 +56,10 @@ function criarModal(documento) {
     footer_link = document.createElement("footer");
     footer_link.classList.add("w3-container");
     footer_link.classList.add("w3-light-blue");
-    link = document.createElement("p");
+    link = document.createElement("a");
     link.innerHTML = documento.link;
+    link.href = documento.link;
+    link.target = "_blank";
 
     // Adicionando os elementos na árvore.
     footer_link.appendChild(link);
