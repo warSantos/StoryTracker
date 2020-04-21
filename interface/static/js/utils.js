@@ -1,5 +1,20 @@
 function criarModal(documento) {
 
+    
+    // Configurando a cor das classes.
+    if (documento.classe == "mercado"){
+        cor = "w3-orange";
+    }else if (documento.classe == "poder"){
+        cor = "w3-red";
+    }else if (documento.classe == "tec"){
+        cor = "w3-indigo";
+    }else if (documento.classe == "ilustrada"){
+        cor = "w3-light-blue";
+    }else if (documento.classe == "esporte"){
+        cor = "w3-light-green";
+    }else { // Mundo
+        cor = "w3-amber";
+    }
     // Criando o card e configurando sua posição.
     card = document.createElement("div");
     card.classList.add("w3-card-4");
@@ -11,7 +26,7 @@ function criarModal(documento) {
     classe = document.createElement("h1");
     classe.innerHTML = documento.classe;
     classe.classList.add("w3-container");
-    classe.classList.add("w3-light-blue");
+    classe.classList.add(cor);
     h.appendChild(classe);
     // Configurando o espaço com o título.
     titulo = document.createElement("p");
@@ -22,7 +37,7 @@ function criarModal(documento) {
     // Configurando a barra de texto.
     rodape = document.createElement("footer");
     rodape.classList.add("w3-container");
-    rodape.classList.add("w3-light-blue");
+    rodape.classList.add(cor);
     texto_rodape = document.createElement("p");
     texto_underscore = document.createElement("a");
     texto_underscore.innerHTML = "See more..."
@@ -41,7 +56,7 @@ function criarModal(documento) {
     sub_div.classList.add("w3-card-4");
     header_modal = document.createElement("header");
     header_modal.classList.add("w3-container");
-    header_modal.classList.add("w3-light-blue");
+    header_modal.classList.add(cor);
     h_titulo = document.createElement("h3");
     h_titulo.innerHTML = documento.titulo;
     fechar = document.createElement("span");
@@ -55,7 +70,7 @@ function criarModal(documento) {
     texto_modal.innerHTML = documento.texto;
     footer_link = document.createElement("footer");
     footer_link.classList.add("w3-container");
-    footer_link.classList.add("w3-light-blue");
+    footer_link.classList.add(cor);
     link = document.createElement("a");
     link.innerHTML = documento.link;
     link.href = documento.link;
