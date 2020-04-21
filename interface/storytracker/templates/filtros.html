@@ -4,19 +4,18 @@
 {% block title %} Story Tracker - Folha de SP {% endblock %}
 
 {% block content %}
-
 <div class="bg-secondary input-group rounded-pill p-3" style="height: 9vh;">
     <div class="w-50 d-flex flex-row">
-        <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon3"
+        <input id="texto" type="search" placeholder="What're you searching for?" aria-describedby="button-addon3"
             class="form-control bg-none border-0">
-        <button type="button" class="btn btn-info ml-1">
+        <button type="button" class="btn btn-info ml-1" onclick="pageRanking()">
             <span class="glyphicon glyphicon-search"></span> Search
         </button>
     </div>
     <div class="d-flex flex-row">
         <label for="example-date-input" class="col-2 col-form-label">Date</label>
         <div class="col-9">
-            <input class="form-control" type="date" value="2016-04-01" id="example-date-input">
+            <input id="data" class="form-control" type="date" value="2016-04-01" id="example-date-input">
         </div>
     </div>
 </div>
@@ -42,7 +41,9 @@
         </div>
     </div>
 </div>
-<div class="w-50 p-4">
+<div class="w-75 p-4 float-left" id="painel">
+</div>
+<div class="w-25 p-4 float-right border-right border-left border-secondary">
     <h3> Configuração de Parâmetros </h3>
     <p>
         <b>Title x Text Importance:</b> este parâmetro varia no intervalo [0,1]. Este parâmetro equilibra a pesquisa por

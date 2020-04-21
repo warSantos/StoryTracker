@@ -1,0 +1,4 @@
+{
+    "modelo": "../modelos/modelos/doc2vec.text_0_100_10",
+    "dataframe": "../dados/classificados.csv"
+}

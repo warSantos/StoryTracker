@@ -18,5 +18,4 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('storytracker.urls')),
-    path('timeline/', include('storytracker.urls')),
 ]
