@@ -2,6 +2,7 @@ from django.db import models
 import sys
 from gensim.models.doc2vec import Doc2Vec
 from scipy import spatial
+import copy
 
 sys.path.append('../database')
 import utils
@@ -29,7 +30,8 @@ class PageRanking(models.Model):
         conn = utils.Utils().conectar('../database/database.ini')
         # Criando vetor de representação do texto inserido pelo usuário.
         print(texto)
-        vetor_pesquisa = modelo_texto.infer_vector(texto.lower().split())
+        temporario = copy.deepcopy(modelo_texto)
+        vetor_pesquisa = temporario.infer_vector(texto.lower().split())
 
         # Resgatando os ids dos documentos do mês.
         cursor = conn.cursor()
