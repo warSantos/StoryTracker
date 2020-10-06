@@ -7,6 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.svm import LinearSVC
 from gensim.models.doc2vec import Doc2Vec
 
 class Classificador():
@@ -94,6 +95,9 @@ class Classificador():
         elif alg == 3:
             clf = MLPClassifier(solver='adam', alpha=1e-5,\
                 hidden_layer_sizes=(100, 2), random_state=1, learning_rate= 'adaptive', max_iter=300)
+        elif alg == 5:
+            print("Aplicando: LinearSVC")
+            clf = LinearSVC(random_state=0, tol=1e-5)
         else:
             clf = RandomForestClassifier(max_depth=2, random_state=0)
         
