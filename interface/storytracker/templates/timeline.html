@@ -10,6 +10,15 @@
 {% block scripts %}
 <!-- Coloque seus scripts aqui. -->
 <script type="text/javascript">
-    timeline = new TL.Timeline('timeline-embed', "{% static 'json/timeline-teste.json' %}");
+
+    //var documentos = "{% static 'json/timeline-teste.json' %}"
+    var documentos = {{ documentos | safe }};
+    console.log(documentos[0]);
+    
+    var slide_inicial = documentos.shift();
+    var options = {
+        start_at_slide: slide_inicial
+    }
+    timeline = new TL.Timeline('timeline-embed', documentos[0], options);
 </script>
 {% endblock %}

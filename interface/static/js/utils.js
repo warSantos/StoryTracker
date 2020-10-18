@@ -40,9 +40,9 @@ function criarModal(documento) {
     // Adicionando input de selecionado.
     var selecao = document.createElement("INPUT");
     selecao.setAttribute("type", "checkbox");
-    selecao.id = documento.id_documento.toString();
+    selecao.id = "checkbox_"+documento.id_documento.toString();
     label = document.createElement("label");
-    label.htmlFor = documento.id_documento.toString();
+    label.htmlFor = "checkbox_"+documento.id_documento.toString();
     label.appendChild(document.createTextNode('Select'));
     
     //selecao.classList.add("custom-control-input");

@@ -16,57 +16,35 @@ class Popular(utils.Utils):
         conn = self.conectar()
         cursor = conn.cursor()
 
-        sql_create = """CREATE TABLE IF NOT EXISTS public.%s (
+        sql = """CREATE TABLE IF NOT EXISTS public.documentos (
             id_documento integer NOT NULL PRIMARY KEY,
-            texto text COLLATE pg_catalog."pt_BR.utf8" NOT NULL,
             titulo text COLLATE pg_catalog."pt_BR.utf8" NOT NULL,
+            texto text COLLATE pg_catalog."pt_BR.utf8" NOT NULL,
             data date NOT NULL,
             link text NOT NULL,
             classe text NOT NULL)
             WITH (
             OIDS=FALSE)"""
 
+        cursor.execute(sql)
+
         # Obtendo as categorias existentes no dataset.
-        df = pd.read_csv(self.configs["dataframe"]).sort_values(by=['date'])
+        df = pd.read_csv(self.configs["dataframe"])
+        
+        lista = []
+        for doc in df.itertuples():
+            tupla = (doc.Index, doc.title, doc.text,
+                doc.date, doc.link, doc.classe,)
+            lista.append(tupla)
 
-        print("Criando tabelas...")
-        # Criando as tabelas para cada mês caso elas não existam e
-        datas = set(df['date'])
-        d_datas = {}
-        for data in datas:
-            d = data.split('-')
-            d.pop()
-            tab_nome = 'documentos_'+'_'.join(d)
-            if tab_nome not in d_datas:
-                d_datas[tab_nome] = list()
+        lista.sort(key=lambda x: x[3])
 
-            for tab_nome in sorted(d_datas.keys()):
-                #cursor.execute("DROP TABLE IF EXISTS %s" % tab_nome)
-                cursor.execute(sql_create % tab_nome)
-
-        print("Inserindo documentos...")
-        # Inserindo os documentos na base de dados.
-        classes = set(df['classe'])
-        for classe in classes:
-            ndf = df[df['classe'] == classe]
-            for doc in ndf.itertuples():
-                d = doc.date.split('-')
-                d.pop()
-                tab_nome = 'documentos_'+'_'.join(d)
-                tupla = (doc.Index, doc.text, doc.title,
-                         doc.date, doc.link, doc.classe,)
-                d_datas[tab_nome].append(tupla)
-
-        for tab_nome in d_datas:
-
-            sql = "INSERT INTO "+tab_nome+"(id_documento, texto, titulo, data, link, classe)"\
-                " VALUES (%s,%s,%s,%s,%s,%s)"
-            print(d_datas[tab_nome][:1])
-            cursor.executemany(sql, d_datas[tab_nome])
-
+        sql = """INSERT INTO documentos (id_documento, titulo, texto, data, link, classe)
+                VALUES (%s,%s,%s,%s,%s,%s)"""
+        
+        cursor.executemany(sql, lista)
         cursor.close()
         conn.commit()
-        print("Finalizado com Sucesso!")
 
 if __name__ == '__main__':
 

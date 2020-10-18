@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.db import models
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from .models import PageRanking
+from .models import PageRanking, TimelineModel
 
 # Create your views here.
 
@@ -16,10 +16,14 @@ class TimeLine():
     
     @csrf_exempt
     def timeline(request):
-        id_doc = request.POST.get("id_doc", "")
+
+        id_doc = int(request.POST.get("id_doc", "").replace("checkbox_",""))
         print("ID Documento Selecionado: ", id_doc)
-        
-        return render(request, 'timeline.html')
+        tm = TimelineModel()
+        data = {}
+        data["documentos"] = tm.timeline(id_doc)
+        #return JsonResponse(docs_tm, safe=False)     
+        return render(request, 'timeline.html', data)
 
 
 class Ranking():
@@ -36,4 +40,5 @@ class Ranking():
 class Doc():
 
     def documentacao(request):
+        
         return render(request, "doc.html")
