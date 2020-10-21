@@ -10,21 +10,27 @@ sys.path.append('../database')
 import utils
 # Create your models here.
 
-m_texto = '../modelos/modelos/doc2vec.classificados_text_0_100_10'
+m_texto = '../modelos/modelos/doc2vec.classificados_text_1_100_10'
+#m_texto = '../modelos/modelos/doc2vec.classificados_title_0_100_10'
 modelo_texto = Doc2Vec.load(m_texto)
+
 
 class PageRanking(models.Model):
 
-    
     def ranking(self, texto, data):
 
+        modulo_base = Base()
         # Abrindo conexão com a base de dados.
         conn = utils.Utils().conectar('../database/database.ini')
-        
+
         # Criando vetor de representação do texto inserido pelo usuário.
         print("Query: ", texto)
-        #TODO: VOLTAR PARA O BACKUP DO MODELO PARA A VERSÃO FINAL.
-        vetor_pesquisa = modelo_texto.infer_vector(texto.lower().split())
+        # TODO: VOLTAR PARA O BACKUP DO MODELO PARA A VERSÃO FINAL.
+        # Estratégia 1
+        vetor_pesquisa = modulo_base.inferir_vetor(texto, modelo_texto)
+        # Estratégia 2
+        #vetor_pesquisa = modelo_texto.infer_vector(texto.lower().split())
+        # Estratégia 3
         #temporario = copy.deepcopy(modelo_texto)
         #vetor_pesquisa = temporario.infer_vector(texto.lower().split())
 
@@ -32,7 +38,7 @@ class PageRanking(models.Model):
         # TODO: Os documentos estão sendo comparados somente com de uma tabela.
         cursor = conn.cursor()
         sql = """SELECT id_documento FROM documentos WHERE data >= %s AND data <= %s"""
-        data_ini, data_fim = Base().datas_raio(data)
+        data_ini, data_fim = modulo_base.datas_raio(data)
         cursor.execute(sql, (data_ini, data_fim,))
         comparacoes = list()
 
@@ -47,30 +53,32 @@ class PageRanking(models.Model):
         valores = ','.join([t[0] for t in comparacoes[:12]])
         sql = """SELECT * FROM documentos WHERE id_documento IN (%s)""" % valores
         cursor.execute(sql)
-        
+
         # Criando json de resposta.
-        resposta = Base().queryset_para_json(cursor)
+        resposta = modulo_base.queryset_para_json(cursor)
         cursor.close()
         conn.close()
         return resposta
+
 
 class TimelineModel(models.Model):
 
     # Retorna o id do documento do vizinho mais próximo ao documento de
     # referência e os jsons dos documentos do intervalo.
-    def vizinhos(self, id_doc_ref, data_ini, data_end, cursor, n_vizinhos=10):
+    def vizinhos(self, id_doc_ref, query_doc, vetor_query, data_ini, data_end, cursor, n_vizinhos=10):
 
         # Obtendo o valor de comparação dos vetores com o vetor de pesquisa.
         sql = """SELECT id_documento FROM documentos WHERE data >= %s AND data < %s"""
         comparacoes = list()
-        
-        cursor.execute(sql,(data_ini, data_end,))
+
+        cursor.execute(sql, (data_ini, data_end,))
         # Obtendo o vetor do documento de referência.
         vetor_doc_ref = modelo_texto['DOC_%s' % id_doc_ref]
         # Para cada documento.
         for id_doc_viz in cursor.fetchall():
             v = modelo_texto['DOC_%s' % id_doc_viz[0]]
-            score = spatial.distance.cosine(v, vetor_doc_ref)
+            score = ((1 - query_doc) * spatial.distance.cosine(v, vetor_doc_ref) + \
+                    query_doc * spatial.distance.cosine(v, vetor_query))
             comparacoes.append([id_doc_viz[0], 1-score])
         comparacoes.sort(key=lambda x: x[1], reverse=True)
         print("IDs: ", id_doc_ref, comparacoes[0][0])
@@ -87,32 +95,36 @@ class TimelineModel(models.Model):
     # salto: tamanho da janela de comparação ex.:(2020-01-01 - 2020-01-16)
     # para 15 dias de janela.
     # sentido: -1 passado 1 futuro.
-    def expansao(self, id_doc, data_doc, cursor, limite=60, salto=15, sentido=-1):
-        
+    def expansao(self, id_doc, query_doc, vetor_query, data_doc, cursor, limite=60, salto=15, sentido=-1):
+
         id_doc_ref = id_doc
         data_fim = data_doc
         cont = 0
         docs_set = []
+        modulo_base = Base()
         while cont < limite:
-            data_ini = str(Base().data_relativa(data_fim, meses=0, dias=15*sentido))
+            data_ini = str(modulo_base.data_relativa(
+                data_fim, meses=0, dias=15*sentido))
             # Se a expansão for para o passado.
             if sentido == -1:
-                id_doc_ref, docs = self.vizinhos(id_doc_ref, data_ini, data_fim, cursor)
+                id_doc_ref, docs = self.vizinhos(
+                    id_doc_ref, query_doc, vetor_query, data_ini, data_fim, cursor)
                 docs_set.insert(0, docs)
             # Se a expansão for para o futuro no código seguinte a variável
             # data_ini vai ser maior que a data data_fim, dessa forma basta
             # inverter a ordem das datas.
             else:
-                id_doc_ref, docs = self.vizinhos(id_doc_ref, data_fim, data_ini, cursor)
+                id_doc_ref, docs = self.vizinhos(
+                    id_doc_ref, query_doc, vetor_query, data_fim, data_ini, cursor)
                 docs_set.append(docs)
             # Atualizando a data de borda.
             data_fim = data_ini
             cont += salto
             print(cont)
-        
-        return docs_set            
 
-    def timeline(self, id_doc):
+        return docs_set
+
+    def timeline(self, id_doc, query, query_doc):
 
         # Abrindo conexão com a base de dados.
         conn = utils.Utils().conectar('../database/database.ini')
@@ -122,19 +134,25 @@ class TimelineModel(models.Model):
         cursor = conn.cursor()
         cursor.execute(sql, (id_doc,))
         data_doc = str(cursor.fetchall()[0][0])
-        
+
         # TODO: Os primeiros testes vão ser feitos resgatando somente
         # 60 dias a frente e após uma data prefixada, com a seleção de
         # apenas um documento podendo ser expandido depois.
 
+        # Gerando vetor de representação da query.
+        #vetor_query = modelo_texto.infer_vector(query.lower().split())
+        vetor_query = Base().inferir_vetor(query, modelo_texto)
+
         # Procuando os documentos referentes ao passado.
-        passado = self.expansao(id_doc, data_doc, cursor)
+        passado = self.expansao(
+            id_doc, query_doc, vetor_query, data_doc, cursor)
 
         # Expandindo em direção aos documentos no futuro.
-        futuro = self.expansao(id_doc, data_doc, cursor, sentido=1)
-        
+        futuro = self.expansao(
+            id_doc, query_doc, vetor_query, data_doc, cursor, sentido=1)
+
         return self.formatar(passado, futuro)
-        #return passado + futuro
+        # return passado + futuro
 
     def formatar(self, passado, futuro):
 
@@ -143,15 +161,15 @@ class TimelineModel(models.Model):
         # TODO a timeline tem a opção de marcar onde começar
         # a sua visualização.
         # Adicionando o slide inicial como o primeiro item do json.
-        eventos = [len(passado), { "events": [] }]
+        eventos = [len(passado), {"events": []}]
         # Selecionando o evento base para fazer ele como
         # a página inicial da timeline.
         for intervalo in tml:
-            
+
             evento = {}
             # Selecionando o documento de referência (mais similar).
             doc_principal = intervalo.pop(0)
-            
+
             # Configurando a data do intervalo como a do documento principal.
             ano, mes, dia = str(doc_principal["data"]).split("-")
             evento["start_date"] = {
@@ -165,8 +183,8 @@ class TimelineModel(models.Model):
             evento["text"] = {
                 "headline": headline
             }
-            
-            ## Configurando o texto
+
+            # Configurando o texto
             # Configurando o texto do documento principal.
             # Configurando a div para deixar os documentos em linha.
             div_mae = "<div class=\"d-flex flex-row\">"
@@ -190,7 +208,7 @@ class TimelineModel(models.Model):
                     text += div_mae
                     cont = -1
                 cont += 1
-            
+
             evento["text"]["text"] = text
             eventos[1]["events"].append(evento)
         return json.dumps(eventos)

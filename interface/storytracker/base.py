@@ -1,6 +1,6 @@
 import datetime
 from dateutil.relativedelta import relativedelta
-
+import numpy as np
 
 class Base():
 
@@ -35,3 +35,19 @@ class Base():
         data_fim = self.data_relativa(data, meses, dias)
 
         return data_ini.strftime('%Y-%m-%d'), data_fim.strftime('%Y-%m-%d')
+    
+    def inferir_vetor(self, query, modelo):
+
+        # Function returning vector reperesentation of a document
+        doc_tokens = query.lower().split()
+        embeddings = []
+        if len(doc_tokens)<1:
+            return np.zeros(100)
+        else:
+            for tok in doc_tokens:
+                if tok in modelo.wv.vocab:
+                    embeddings.append(modelo.wv.word_vec(tok))
+                else:
+                    embeddings.append(np.random.rand(100))
+            # mean the vectors of individual words to get the vector of the document
+            return np.mean(embeddings, axis=0)

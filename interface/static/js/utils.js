@@ -212,14 +212,20 @@ function gerarTimeline(){
         return;
     }
 
-    // Fazendo a requisição para gerar a timeline.    
+    // Criando e configurando o formulário para realizar o submit.
     const form = document.createElement('form');
     form.method = "POST";
     form.action = 'timeline/';
+    // Configurando o input para levar as informações de filtro.
     const input_falso = document.createElement('input');
     input_falso.type = 'hidden';
-    input_falso.name = 'id_doc';
-    input_falso.value = id_doc;
+    input_falso.name = 'info';
+    // Configurando os valores.
+    var info = {};
+    info["id_doc"] = id_doc
+    info["query"] = document.getElementById("texto").value;
+    info["query_doc"] = document.getElementById("query_doc").value;
+    input_falso.value = JSON.stringify(info);
     form.appendChild(input_falso);
     document.body.appendChild(form);
     form.submit();
