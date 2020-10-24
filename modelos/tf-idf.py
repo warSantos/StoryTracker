@@ -4,15 +4,14 @@
 import os
 import pandas as pd
 from operator import index
-from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import AdaBoostClassifier
 from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import LinearSVC
+from sklearn.linear_model import LogisticRegression
 from sklearn.neural_network import MLPClassifier
-from gensim.models.doc2vec import Doc2Vec
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import cross_val_score
-from sklearn.ensemble import AdaBoostClassifier
-from sklearn.svm import LinearSVC
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.corpus import stopwords
@@ -82,7 +81,7 @@ class TfIdf():
 
         return X_train_counts, X_train_tfidf
 
-    def classificar(self, X_train_counts, X_train_tfidf, alg=1, vezes=1):
+    def avaliar_classificacao(self, X_train_counts, X_train_tfidf, alg=1, vezes=1):
 
         scores = []
 
@@ -133,10 +132,10 @@ class TfIdf():
     def executar(self):
 
         X_train_counts, X_train_tfidf = self.tf_idf()
-        vezes = 1
-        for alg in range(1, 2):
-            self.classificar(X_train_counts,
-                             X_train_tfidf, alg, vezes)
+        vezes = 6
+        for alg in range(1, 8):
+            self.avaliar_classificacao(X_train_counts,
+                                       X_train_tfidf, alg, vezes)
 
 
 if __name__ == '__main__':

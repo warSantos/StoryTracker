@@ -27,20 +27,23 @@ class Modelo():
                 words=doc, tags=['DOC_'+str(index)]))
         return documentos
 
-    def treinar(self, documentos, atributo, dim, tipo, epocas):
+    def treinar(self, documentos, atributo, dim, tipo, epocas, prefixo):
 
-        config = 'classificados_'+atributo+'_'+str(tipo)+'_'+str(dim)+'_'+str(epocas)
+        config = prefixo+atributo+'_' + \
+            str(tipo)+'_'+str(dim)+'_'+str(epocas)
         print("MODELO COM CONFIGURAÇÃO: ", config)
-        modelo = Doc2Vec(vector_size=dim, dm=tipo, window=10, min_count=1, alpha=0.025, min_alpha=0.025, workers=20)
+        modelo = Doc2Vec(vector_size=dim, dm=tipo, window=10,
+                         min_count=1, alpha=0.025, min_alpha=0.025, workers=20, dbow_words=1, hs=1)
         modelo.build_vocab(documentos)
         for epoca in range(epocas):
-            modelo.train(documentos, total_examples=modelo.corpus_count, epochs=1)
+            modelo.train(
+                documentos, total_examples=modelo.corpus_count, epochs=1)
             modelo.alpha -= 0.002
             modelo.min_alpha = modelo.alpha
         modelo.save('modelos/doc2vec.'+config)
 
-    def gerar_modelos(self, dataset, atributo):
-        
+    def gerar_modelos(self, dataset, atributo, prefixo='classificados_'):
+
         dimensoes = [100]
         tipos = [0, 1]
         epocas = [10]
@@ -48,9 +51,10 @@ class Modelo():
         for dim in dimensoes:
             for tipo in tipos:
                 for epoca in epocas:
-                    self.treinar(documentos, atributo, dim, tipo, epoca)
+                    self.treinar(documentos, atributo, dim, tipo, epoca, prefixo)
+
 
 if __name__ == '__main__':
 
     m = Modelo()
-    m.gerar_modelos(argv[1], argv[2])
+    m.gerar_modelos(argv[1], argv[2], argv[3])
