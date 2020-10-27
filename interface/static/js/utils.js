@@ -134,13 +134,15 @@ function pageRanking() {
     var texto = document.getElementById("texto").value;
     var data = document.getElementById("data").value;
     var meses = document.getElementById("meses").value;
+    var n_docs = document.getElementById("n_arquivos_ranking").value;
     $.ajax({
         url: "pageranking/",
         type: "POST",
         data: {
             data: data,
             texto: texto,
-            meses: meses
+            meses: meses,
+            n_docs: n_docs
         },
         success: function (data) {
 
@@ -225,6 +227,8 @@ function gerarTimeline(){
     info["id_doc"] = id_doc
     info["query"] = document.getElementById("texto").value;
     info["query_doc"] = document.getElementById("query_doc").value;
+    info["meses"] = document.getElementById("advanced_meses").value;
+    info["tam_intervalo"] = document.getElementById("advanced_intervalo").value;
     input_falso.value = JSON.stringify(info);
     form.appendChild(input_falso);
     document.body.appendChild(form);

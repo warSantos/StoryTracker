@@ -20,14 +20,11 @@ class TimeLine():
         
         # Convertendo o json para dicionário.
         info = json.loads(request.POST.get("info", ""))
-        id_doc = int(info["id_doc"].replace("checkbox_",""))
-        query = info["query"]
-        query_doc = float(info["query_doc"])
         print(info)
         # Fazendo requisição da timline.
         tm = TimelineModel()
         data = {}
-        data["documentos"] = tm.timeline(id_doc, query, query_doc)
+        data["documentos"] = tm.timeline(info)
         #return JsonResponse(docs_tm, safe=False)     
         return render(request, 'timeline.html', data)
 
@@ -39,8 +36,9 @@ class Ranking():
 
         texto = request.POST.get("texto", "")
         data = request.POST.get("data", "")
-        meses = request.POST.get("meses", "")
-        return JsonResponse(PageRanking().ranking(texto, data), safe=False)     
+        meses = int(request.POST.get("meses", ""))
+        n_docs = int(request.POST.get("n_docs",""))
+        return JsonResponse(PageRanking().ranking(texto, data, meses, n_docs), safe=False)     
         
 
 class Doc():

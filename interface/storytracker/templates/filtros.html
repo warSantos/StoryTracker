@@ -4,39 +4,67 @@
 {% block title %} Story Tracker - Folha de SP {% endblock %}
 
 {% block content %}
-<div class="bg-secondary input-group rounded-pill p-3" style="height: 9vh;">
-    <div class="w-50 d-flex flex-row">
-        <input id="texto" type="search" placeholder="Type your query" aria-describedby="button-addon3"
-            class="form-control bg-none border-0">
+<!-- Barra de pesquisa. -->
+<div class="bg-secondary input-group rounded-pill p-2 justify-content-between"
+    style="height: 7vh;">
+    <!-- Input para query. -->
+    <div class="form-group d-flex flex-row pr-4 mr-4">
+        <input id="texto" type="search" class="input-sm col-sm-12" placeholder="Type your query"
+            aria-describedby="button-addon3" class="form-control bg-none border-0">
         <button type="button" class="btn btn-info ml-1" onclick="pageRanking()">
             <span class="glyphicon glyphicon-search"></span> Search
         </button>
     </div>
-    <div class="d-flex flex-row">
-        <label for="example-date-input" class="col-2 col-form-label">Date</label>
+    <!-- Input para a data. -->
+    <div class="form-group d-flex flex-row ">
+        <label for="data" class="col-form-label"><span class="badge badge-dark">Base Date:</span></label>
         <div class="col-9">
-            <input id="data" class="form-control" type="date" value="2016-04-01" id="example-date-input">
+            <input id="data" class="form-control" type="date" value="2016-04-01">
         </div>
     </div>
-</div>
-<div class="bg-dark input-group rounded-pill p-2" style="height: 7vh;">
-    <p class="text-light mr-4 p-1">Advanced Search</p>
-    <div class="mr-5">
-        <label for="customRange3 "><span class="badge badge-dark">Document Importance</span>
-            <input type="range" class="custom-range" min="0" max="1" value="1" step="0.1" id="query_doc">
-            <span class="badge badge-dark">Query Importance</span></label>
+    <!-- Input para a quantidade de meses para o intervalo de pesquisa. -->
+    <div class="form-group d-flex flex-row ">
+        <label for="meses" class="col-form-label "><span class="badge badge-dark">Months:</span></label>
+        <div>
+            <input class="form-control col-sm-5" type="number" value="3" id="meses" min="1" max="4">
+        </div>
     </div>
-    <div class="w-25 d-flex">
-        <div class="d-flex">
-            <label for="meses" class="col-4 col-form-label "><span class="badge badge-dark">Months:</span></label>
-            <div class="col-6">
-                <input class="form-control" type="number" value="3" id="meses" min="1" max="10">
+    <!-- Input para a quantidade de arquivos mostrados no ranking. -->
+    <div class="form-group d-flex flex-row ">
+        <label for="n_arquivos_ranking" class="col-form-label"><span class="badge badge-dark">News:</span></label>
+        <div>
+            <input class="form-control col-sm-5" type="number" value="12" id="n_arquivos_ranking" min="3" max="12">
+        </div>
+    </div>
+    <!-- Botão para mostrar div de pesquisa avançada. -->
+    <p>
+        <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            Advanced Search
+        </button>
+    </p>
+</div>
+<!-- Barra de pesquisa avançada. -->
+<div class="collapse" id="collapseExample">
+    <div class="bg-dark input-group rounded-pill p-2">
+        <!-- Input para relevância do documento vs query. -->
+        <div class="mr-5">
+            <label for="customRange3 "><span class="badge badge-dark">Document Importance</span>
+                <input type="range" class="custom-range" min="0" max="1" value="1" step="0.1" id="query_doc">
+                <span class="badge badge-dark">Query Importance</span></label>
+        </div>
+        <!-- Input para a quantidade de arquivos mostrados por intervalo na timeline. -->
+        <div class="form-group d-flex flex-row">
+            <label for="advanced_meses" class="col-form-label"><span class="badge badge-dark">Meses:</span></label>
+            <div>
+                <input id="advanced_meses" class="form-control col-sm-5" type="number" value="10" min="1" max="10">
             </div>
         </div>
-        <div class="d-flex">
-            <label for="files" class="col-3 col-form-label"><span class="badge badge-dark">Files:</span></label>
-            <div class="col-6">
-                <input class="form-control" type="number" value="5" id="files" min="3" max="10">
+        <!-- Input para a quantidade de dias em um intervalo da timeline. -->
+        <div class="form-group d-flex flex-row">
+            <label for="advanced_intervalo" class="col-form-label"><span class="badge badge-dark">Size Interval:</span></label>
+            <div>
+                <input id="advanced_intervalo" class="form-control col-sm-5" type="number" value="15" min="5" max="60" step="5">
             </div>
         </div>
     </div>
@@ -45,10 +73,10 @@
 <div class="w-95 p-4 float-left" id="painel">
 </div>
 <div>
-    <button type="button" class="btn btn-info" id="botao_timeline" style="display:none;" onclick="gerarTimeline()">Gerar Timeline</button>
+    <button type="button" class="btn btn-info" id="botao_timeline" style="display:none;" onclick="gerarTimeline()">Gerar
+        Timeline</button>
 </div>
 {% endblock %}
 {% block scripts %}
 <!-- Coloque seus scripts aqui. -->
-
 {% endblock %}

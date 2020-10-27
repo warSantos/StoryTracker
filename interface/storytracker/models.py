@@ -17,14 +17,13 @@ modelo_texto = Doc2Vec.load(m_texto)
 
 class PageRanking(models.Model):
 
-    def ranking(self, texto, data):
+    def ranking(self, texto, data, meses, n_docs):
 
         modulo_base = Base()
         # Abrindo conexão com a base de dados.
         conn = utils.Utils().conectar('../database/database.ini')
 
         # Criando vetor de representação do texto inserido pelo usuário.
-        print("Query: ", texto)
         # TODO: VOLTAR PARA O BACKUP DO MODELO PARA A VERSÃO FINAL.
         # Estratégia 1
         vetor_pesquisa = modulo_base.inferir_vetor(texto, modelo_texto)
@@ -38,7 +37,8 @@ class PageRanking(models.Model):
         # TODO: Os documentos estão sendo comparados somente com de uma tabela.
         cursor = conn.cursor()
         sql = """SELECT id_documento FROM documentos WHERE data >= %s AND data <= %s"""
-        data_ini, data_fim = modulo_base.datas_raio(data)
+        print("MESES: ", meses)
+        data_ini, data_fim = modulo_base.datas_raio(data, meses)
         cursor.execute(sql, (data_ini, data_fim,))
         comparacoes = list()
 
@@ -50,7 +50,7 @@ class PageRanking(models.Model):
         comparacoes.sort(key=lambda x: x[1], reverse=True)
 
         # Resgatando os documentos mais parecidos.
-        valores = ','.join([t[0] for t in comparacoes[:12]])
+        valores = ','.join([t[0] for t in comparacoes[:n_docs]])
         sql = """SELECT * FROM documentos WHERE id_documento IN (%s)""" % valores
         cursor.execute(sql)
 
@@ -80,6 +80,10 @@ class TimelineModel(models.Model):
             score = ((1 - query_doc) * spatial.distance.cosine(v, vetor_doc_ref) + \
                     query_doc * spatial.distance.cosine(v, vetor_query))
             comparacoes.append([id_doc_viz[0], 1-score])
+        # Se não existir documentos no intervalo.
+        if not comparacoes:
+            return -1, []
+
         comparacoes.sort(key=lambda x: x[1], reverse=True)
         print("IDs: ", id_doc_ref, comparacoes[0][0])
         # Resgatando N vizinhos mais parecidos.
@@ -109,6 +113,9 @@ class TimelineModel(models.Model):
             if sentido == -1:
                 id_doc_ref, docs = self.vizinhos(
                     id_doc_ref, query_doc, vetor_query, data_ini, data_fim, cursor)
+                # Se a expansão chegou ao limite da base de dados.
+                if id_doc_ref == -1:
+                    break
                 docs_set.insert(0, docs)
             # Se a expansão for para o futuro no código seguinte a variável
             # data_ini vai ser maior que a data data_fim, dessa forma basta
@@ -116,6 +123,9 @@ class TimelineModel(models.Model):
             else:
                 id_doc_ref, docs = self.vizinhos(
                     id_doc_ref, query_doc, vetor_query, data_fim, data_ini, cursor)
+                # Se a expansão chegou ao limite da base de dados.
+                if id_doc_ref == -1:
+                    break
                 docs_set.append(docs)
             # Atualizando a data de borda.
             data_fim = data_ini
@@ -124,7 +134,14 @@ class TimelineModel(models.Model):
 
         return docs_set
 
-    def timeline(self, id_doc, query, query_doc):
+    def timeline(self, info):
+
+        # Selecionando os dados.
+        id_doc = int(info["id_doc"].replace("checkbox_",""))
+        query = info["query"]
+        query_doc = float(info["query_doc"])
+        meses = int(info["meses"])
+        salto = int(info["tam_intervalo"])
 
         # Abrindo conexão com a base de dados.
         conn = utils.Utils().conectar('../database/database.ini')
@@ -138,6 +155,7 @@ class TimelineModel(models.Model):
         # TODO: Os primeiros testes vão ser feitos resgatando somente
         # 60 dias a frente e após uma data prefixada, com a seleção de
         # apenas um documento podendo ser expandido depois.
+        tempo = meses * 30
 
         # Gerando vetor de representação da query.
         #vetor_query = modelo_texto.infer_vector(query.lower().split())
@@ -145,11 +163,11 @@ class TimelineModel(models.Model):
 
         # Procuando os documentos referentes ao passado.
         passado = self.expansao(
-            id_doc, query_doc, vetor_query, data_doc, cursor)
+            id_doc, query_doc, vetor_query, data_doc, cursor, limite=tempo, salto=salto)
 
         # Expandindo em direção aos documentos no futuro.
         futuro = self.expansao(
-            id_doc, query_doc, vetor_query, data_doc, cursor, sentido=1)
+            id_doc, query_doc, vetor_query, data_doc, cursor, limite=tempo, salto=salto, sentido=1)
 
         return self.formatar(passado, futuro)
         # return passado + futuro
@@ -175,11 +193,11 @@ class TimelineModel(models.Model):
             evento["start_date"] = {
                 "day": dia,
                 "month": mes,
-                "ano": ano
+                "year": ano
             }
 
             # Configurando o título.
-            headline = "<a href=\"#\"> %s </a> <p> Relacionados </p>" % doc_principal["titulo"]
+            headline = "<a href=\"#\"> %s </a>" % doc_principal["titulo"]
             evento["text"] = {
                 "headline": headline
             }
