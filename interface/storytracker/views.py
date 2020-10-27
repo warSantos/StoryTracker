@@ -38,7 +38,10 @@ class Ranking():
         data = request.POST.get("data", "")
         meses = int(request.POST.get("meses", ""))
         n_docs = int(request.POST.get("n_docs",""))
-        return JsonResponse(PageRanking().ranking(texto, data, meses, n_docs), safe=False)     
+        classes = request.POST.get("classes","")#.split(',')
+        print(texto,data,meses,n_docs,classes)
+
+        return JsonResponse(PageRanking().ranking(texto, data, meses, n_docs, classes), safe=False)     
         
 
 class Doc():

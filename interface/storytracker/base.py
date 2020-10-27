@@ -47,7 +47,9 @@ class Base():
             for tok in doc_tokens:
                 if tok in modelo.wv.vocab:
                     embeddings.append(modelo.wv.word_vec(tok))
+                """
                 else:
                     embeddings.append(np.random.rand(100))
+                """
             # mean the vectors of individual words to get the vector of the document
             return np.mean(embeddings, axis=0)

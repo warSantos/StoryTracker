@@ -12,6 +12,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.neural_network import MLPClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import KFold
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.corpus import stopwords
@@ -66,7 +67,7 @@ class TfIdf():
 
     def salvar_scores(self, scores, label):
 
-        pt = open('tf_idf/'+label+'.txt', 'w')
+        pt = open('tf_idf/random_'+label+'.txt', 'w')
         for score in scores:
             pt.write(str(score)+'\n')
         pt.close()
@@ -101,7 +102,7 @@ class TfIdf():
             if alg == 1:
                 print("Aplicando: ", label[alg])
                 clf = LogisticRegression(
-                    random_state=0, max_iter=300, solver='saga')
+                    random_state=1, max_iter=300, solver='saga')
             # Naive Bayes.
             elif alg == 2:
                 print("Aplicando: ", label[alg])
@@ -123,9 +124,9 @@ class TfIdf():
             elif alg == 7:
                 print("Aplicando: ", label[alg])
                 clf = RandomForestClassifier(max_depth=2, random_state=0)
-
+            kf = KFold(n_splits=5, shuffle=True, random_state=None)
             scores += list(cross_val_score(clf, X_train_counts,
-                                           self.df_treino['category'], cv=5, scoring='f1_macro', n_jobs=25))
+                                           self.df_treino['category'], cv=kf, scoring='f1_macro', n_jobs=25))
         print("F1-Measure: ", label[alg], scores)
         self.salvar_scores(scores, label[alg])
 

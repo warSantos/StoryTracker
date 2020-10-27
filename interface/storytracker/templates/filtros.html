@@ -5,8 +5,7 @@
 
 {% block content %}
 <!-- Barra de pesquisa. -->
-<div class="bg-secondary input-group rounded-pill p-2 justify-content-between"
-    style="height: 7vh;">
+<div class="bg-secondary input-group rounded-pill p-2 justify-content-between" style="height: 7vh;">
     <!-- Input para query. -->
     <div class="form-group d-flex flex-row pr-4 mr-4">
         <input id="texto" type="search" class="input-sm col-sm-12" placeholder="Type your query"
@@ -46,7 +45,66 @@
 </div>
 <!-- Barra de pesquisa avançada. -->
 <div class="collapse" id="collapseExample">
-    <div class="bg-dark input-group rounded-pill p-2">
+    <!-- Inputs para as opções de ranking. -->
+    <div class="bg-dark rounded-pill p-2">
+        <h6 class="text-white bg-dark">Ranking Options</h6>
+    </div>
+    <div class="bg-dark input-group rounded-pill p-4">
+        <!-- Checkbox para classes. -->
+        <div class="p-4">
+            <p class="text-white bg-dark">Classes</p>
+        </div>
+        <div id="classes_ranking">
+            <div>
+                <div class="form-check p-3">
+                    <input class="form-check-input" type="checkbox" value="esporte" id="ranking_checkbox_esporte"
+                        checked>
+                    <label class="form-check-label text-white" for="ranking_checkbox_esporte">
+                        Esporte
+                    </label>
+                </div>
+                <div class="form-check p-3">
+                    <input class="form-check-input" type="checkbox" value="ilustrada" id="ranking_checkbox_ilustrada"
+                        checked>
+                    <label class="form-check-label text-white" for="ranking_checkbox_ilustrada">
+                        Ilustrada
+                    </label>
+                </div>
+                <div class="form-check p-3">
+                    <input class="form-check-input" type="checkbox" value="mercado" id="ranking_checkbox_mercado"
+                        checked>
+                    <label class="form-check-label text-white" for="ranking_checkbox_mercado">
+                        Mercado
+                    </label>
+                </div>
+            </div>
+            <div>
+                <div class="form-check p-3">
+                    <input class="form-check-input" type="checkbox" value="mundo" id="ranking_checkbox_mundo" checked>
+                    <label class="form-check-label text-white" for="ranking_checkbox_mundo">
+                        Mundo
+                    </label>
+                </div>
+                <div class="form-check p-3">
+                    <input class="form-check-input" type="checkbox" value="poder" id="ranking_checkbox_poder" checked>
+                    <label class="form-check-label text-white" for="ranking_checkbox_poder">
+                        Poder
+                    </label>
+                </div>
+                <div class="form-check p-3">
+                    <input class="form-check-input" type="checkbox" value="tec" id="ranking_checkbox_tec" checked>
+                    <label class="form-check-label text-white" for="ranking_checkbox_tec">
+                        Tecnologia
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Inputs para as opções de timeline. -->
+    <div class="bg-dark rounded-pill p-2">
+        <h6 class="text-white bg-dark">Timeline Options</h6>
+    </div>
+    <div class="bg-dark input-group rounded-pill p-4">
         <!-- Input para relevância do documento vs query. -->
         <div class="mr-5">
             <label for="customRange3 "><span class="badge badge-dark">Document Importance</span>
@@ -55,19 +113,22 @@
         </div>
         <!-- Input para a quantidade de arquivos mostrados por intervalo na timeline. -->
         <div class="form-group d-flex flex-row">
-            <label for="advanced_meses" class="col-form-label"><span class="badge badge-dark">Meses:</span></label>
+            <label for="advanced_meses" class="col-form-label"><span class="badge badge-dark">Months:</span></label>
             <div>
                 <input id="advanced_meses" class="form-control col-sm-5" type="number" value="10" min="1" max="10">
             </div>
         </div>
         <!-- Input para a quantidade de dias em um intervalo da timeline. -->
         <div class="form-group d-flex flex-row">
-            <label for="advanced_intervalo" class="col-form-label"><span class="badge badge-dark">Size Interval:</span></label>
+            <label for="advanced_intervalo" class="col-form-label"><span class="badge badge-dark">Size
+                    Interval:</span></label>
             <div>
-                <input id="advanced_intervalo" class="form-control col-sm-5" type="number" value="15" min="5" max="60" step="5">
+                <input id="advanced_intervalo" class="form-control col-sm-5" type="number" value="15" min="5" max="60"
+                    step="5">
             </div>
         </div>
     </div>
+
 </div>
 <!-- Painel de exibição dos documentos. -->
 <div class="w-95 p-4 float-left" id="painel">

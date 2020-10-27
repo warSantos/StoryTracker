@@ -1,6 +1,7 @@
 from django.db import models
 import sys
 from gensim.models.doc2vec import Doc2Vec
+from numpy.lib.function_base import append
 from scipy import spatial
 import copy
 from .base import Base
@@ -17,7 +18,7 @@ modelo_texto = Doc2Vec.load(m_texto)
 
 class PageRanking(models.Model):
 
-    def ranking(self, texto, data, meses, n_docs):
+    def ranking(self, texto, data, meses, n_docs, classes):
 
         modulo_base = Base()
         # Abrindo conexão com a base de dados.
@@ -36,8 +37,11 @@ class PageRanking(models.Model):
         # Resgatando os ids dos documentos do mês.
         # TODO: Os documentos estão sendo comparados somente com de uma tabela.
         cursor = conn.cursor()
-        sql = """SELECT id_documento FROM documentos WHERE data >= %s AND data <= %s"""
-        print("MESES: ", meses)
+        nc = []
+        for c in classes.split(','):
+            nc.append("'"+c+"'")
+        sql = """SELECT id_documento FROM documentos WHERE data >= %s AND data <= %s AND classe IN ({0})""".format(','.join(nc))
+        
         data_ini, data_fim = modulo_base.datas_raio(data, meses)
         cursor.execute(sql, (data_ini, data_fim,))
         comparacoes = list()
@@ -51,6 +55,7 @@ class PageRanking(models.Model):
 
         # Resgatando os documentos mais parecidos.
         valores = ','.join([t[0] for t in comparacoes[:n_docs]])
+        print("Valores: ", valores)
         sql = """SELECT * FROM documentos WHERE id_documento IN (%s)""" % valores
         cursor.execute(sql)
 

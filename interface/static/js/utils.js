@@ -129,20 +129,41 @@ function criarModal(documento) {
     return [card, modal];
 }
 
+// Retorna as classes marcadas na lista de checkbox.
+function classesMarcadas(alvo="classes_ranking"){
+
+    var checkboxes = document.getElementById(alvo).querySelectorAll('input');
+    var classes_marcadas = [];
+    for (var check = 0; check < checkboxes.length; check++){
+        // Se os elementos estiverem selecionados.
+        if (checkboxes[check].checked){
+            classes_marcadas.push(checkboxes[check].value);
+            console.log(checkboxes[check].value);
+        }
+    }
+    return classes_marcadas;
+}
+
 function pageRanking() {
 
+    // Resgatando os dados do HTML.
     var texto = document.getElementById("texto").value;
     var data = document.getElementById("data").value;
     var meses = document.getElementById("meses").value;
     var n_docs = document.getElementById("n_arquivos_ranking").value;
+    var classes = classesMarcadas().join(',');
+
     $.ajax({
         url: "pageranking/",
         type: "POST",
+        dataType: "json",
+        traditional: true,
         data: {
             data: data,
             texto: texto,
             meses: meses,
-            n_docs: n_docs
+            n_docs: n_docs,
+            classes: classes
         },
         success: function (data) {
 
