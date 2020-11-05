@@ -37,10 +37,8 @@ class PageRanking(models.Model):
         # Resgatando os ids dos documentos do mês.
         # TODO: Os documentos estão sendo comparados somente com de uma tabela.
         cursor = conn.cursor()
-        nc = []
-        for c in classes.split(','):
-            nc.append("'"+c+"'")
-        sql = """SELECT id_documento FROM documentos WHERE data >= %s AND data <= %s AND classe IN ({0})""".format(','.join(nc))
+        f_classes = modulo_base.formatar_classes(classes)
+        sql = """SELECT id_documento FROM documentos WHERE data >= %s AND data <= %s AND classe IN ({0})""".format(f_classes)
         
         data_ini, data_fim = modulo_base.datas_raio(data, meses)
         cursor.execute(sql, (data_ini, data_fim,))
@@ -70,10 +68,10 @@ class TimelineModel(models.Model):
 
     # Retorna o id do documento do vizinho mais próximo ao documento de
     # referência e os jsons dos documentos do intervalo.
-    def vizinhos(self, id_doc_ref, query_doc, vetor_query, data_ini, data_end, cursor, n_vizinhos=10):
+    def vizinhos(self, id_doc_ref, query_doc, vetor_query, data_ini, data_end, f_classes, cursor, n_vizinhos=10):
 
         # Obtendo o valor de comparação dos vetores com o vetor de pesquisa.
-        sql = """SELECT id_documento FROM documentos WHERE data >= %s AND data < %s"""
+        sql = """SELECT id_documento FROM documentos WHERE data >= %s AND data <= %s AND classe IN ({0})""".format(f_classes)
         comparacoes = list()
 
         cursor.execute(sql, (data_ini, data_end,))
@@ -90,7 +88,7 @@ class TimelineModel(models.Model):
             return -1, []
 
         comparacoes.sort(key=lambda x: x[1], reverse=True)
-        print("IDs: ", id_doc_ref, comparacoes[0][0])
+        #print("IDs: ", id_doc_ref, comparacoes[0][0])
         # Resgatando N vizinhos mais parecidos.
         valores = ','.join([str(t[0]) for t in comparacoes[:n_vizinhos]])
         sql = """SELECT titulo, link, data FROM documentos WHERE id_documento IN (%s)""" % valores
@@ -104,7 +102,7 @@ class TimelineModel(models.Model):
     # salto: tamanho da janela de comparação ex.:(2020-01-01 - 2020-01-16)
     # para 15 dias de janela.
     # sentido: -1 passado 1 futuro.
-    def expansao(self, id_doc, query_doc, vetor_query, data_doc, cursor, limite=60, salto=15, sentido=-1):
+    def expansao(self, id_doc, query_doc, vetor_query, data_doc, f_classes, cursor, limite=60, salto=15, sentido=-1):
 
         id_doc_ref = id_doc
         data_fim = data_doc
@@ -117,7 +115,7 @@ class TimelineModel(models.Model):
             # Se a expansão for para o passado.
             if sentido == -1:
                 id_doc_ref, docs = self.vizinhos(
-                    id_doc_ref, query_doc, vetor_query, data_ini, data_fim, cursor)
+                    id_doc_ref, query_doc, vetor_query, data_ini, data_fim, f_classes, cursor)
                 # Se a expansão chegou ao limite da base de dados.
                 if id_doc_ref == -1:
                     break
@@ -127,7 +125,7 @@ class TimelineModel(models.Model):
             # inverter a ordem das datas.
             else:
                 id_doc_ref, docs = self.vizinhos(
-                    id_doc_ref, query_doc, vetor_query, data_fim, data_ini, cursor)
+                    id_doc_ref, query_doc, vetor_query, data_fim, data_ini, f_classes, cursor)
                 # Se a expansão chegou ao limite da base de dados.
                 if id_doc_ref == -1:
                     break
@@ -135,7 +133,6 @@ class TimelineModel(models.Model):
             # Atualizando a data de borda.
             data_fim = data_ini
             cont += salto
-            print(cont)
 
         return docs_set
 
@@ -147,6 +144,7 @@ class TimelineModel(models.Model):
         query_doc = float(info["query_doc"])
         meses = int(info["meses"])
         salto = int(info["tam_intervalo"])
+        classes = info["classes"]
 
         # Abrindo conexão com a base de dados.
         conn = utils.Utils().conectar('../database/database.ini')
@@ -164,15 +162,19 @@ class TimelineModel(models.Model):
 
         # Gerando vetor de representação da query.
         #vetor_query = modelo_texto.infer_vector(query.lower().split())
-        vetor_query = Base().inferir_vetor(query, modelo_texto)
+        modulo_base = Base()
+        vetor_query = modulo_base.inferir_vetor(query, modelo_texto)
+
+        # Formatando as classes dos documentos.
+        f_classes = modulo_base.formatar_classes(classes)
 
         # Procuando os documentos referentes ao passado.
         passado = self.expansao(
-            id_doc, query_doc, vetor_query, data_doc, cursor, limite=tempo, salto=salto)
+            id_doc, query_doc, vetor_query, data_doc, f_classes, cursor, limite=tempo, salto=salto)
 
         # Expandindo em direção aos documentos no futuro.
         futuro = self.expansao(
-            id_doc, query_doc, vetor_query, data_doc, cursor, limite=tempo, salto=salto, sentido=1)
+            id_doc, query_doc, vetor_query, data_doc, f_classes, cursor, limite=tempo, salto=salto, sentido=1)
 
         return self.formatar(passado, futuro)
         # return passado + futuro

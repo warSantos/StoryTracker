@@ -54,7 +54,7 @@
         <div class="p-4">
             <p class="text-white bg-dark">Classes</p>
         </div>
-        <div id="classes_ranking">
+        <div id="classes_ranking" class="d-flex flex-row">
             <div>
                 <div class="form-check p-3">
                     <input class="form-check-input" type="checkbox" value="esporte" id="ranking_checkbox_esporte"
@@ -105,17 +105,66 @@
         <h6 class="text-white bg-dark">Timeline Options</h6>
     </div>
     <div class="bg-dark input-group rounded-pill p-4">
+        <!-- Checkbox para classes. -->
+        <div class="p-4">
+            <p class="text-white bg-dark">Classes</p>
+        </div>
+        <div id="classes_timeline" class="d-flex flex-row">
+            <div>
+                <div class="form-check p-3">
+                    <input class="form-check-input" type="checkbox" value="esporte" id="timeline_checkbox_esporte"
+                        checked>
+                    <label class="form-check-label text-white" for="timeline_checkbox_esporte">
+                        Esporte
+                    </label>
+                </div>
+                <div class="form-check p-3">
+                    <input class="form-check-input" type="checkbox" value="ilustrada" id="timeline_checkbox_ilustrada"
+                        checked>
+                    <label class="form-check-label text-white" for="timeline_checkbox_ilustrada">
+                        Ilustrada
+                    </label>
+                </div>
+                <div class="form-check p-3">
+                    <input class="form-check-input" type="checkbox" value="mercado" id="timeline_checkbox_mercado"
+                        checked>
+                    <label class="form-check-label text-white" for="timeline_checkbox_mercado">
+                        Mercado
+                    </label>
+                </div>
+            </div>
+            <div>
+                <div class="form-check p-3">
+                    <input class="form-check-input" type="checkbox" value="mundo" id="timeline_checkbox_mundo" checked>
+                    <label class="form-check-label text-white" for="timeline_checkbox_mundo">
+                        Mundo
+                    </label>
+                </div>
+                <div class="form-check p-3">
+                    <input class="form-check-input" type="checkbox" value="poder" id="timeline_checkbox_poder" checked>
+                    <label class="form-check-label text-white" for="timeline_checkbox_poder">
+                        Poder
+                    </label>
+                </div>
+                <div class="form-check p-3">
+                    <input class="form-check-input" type="checkbox" value="tec" id="timeline_checkbox_tec" checked>
+                    <label class="form-check-label text-white" for="timeline_checkbox_tec">
+                        Tecnologia
+                    </label>
+                </div>
+            </div>
+        </div>
         <!-- Input para relevância do documento vs query. -->
         <div class="mr-5">
             <label for="customRange3 "><span class="badge badge-dark">Document Importance</span>
                 <input type="range" class="custom-range" min="0" max="1" value="1" step="0.1" id="query_doc">
                 <span class="badge badge-dark">Query Importance</span></label>
         </div>
-        <!-- Input para a quantidade de arquivos mostrados por intervalo na timeline. -->
+        <!-- Input para a quantidade de meses de expansão. -->
         <div class="form-group d-flex flex-row">
             <label for="advanced_meses" class="col-form-label"><span class="badge badge-dark">Months:</span></label>
             <div>
-                <input id="advanced_meses" class="form-control col-sm-5" type="number" value="10" min="1" max="10">
+                <input id="advanced_meses" class="form-control col-sm-5" type="number" value="3" min="1" max="10">
             </div>
         </div>
         <!-- Input para a quantidade de dias em um intervalo da timeline. -->
@@ -123,7 +172,7 @@
             <label for="advanced_intervalo" class="col-form-label"><span class="badge badge-dark">Size
                     Interval:</span></label>
             <div>
-                <input id="advanced_intervalo" class="form-control col-sm-5" type="number" value="15" min="5" max="60"
+                <input id="advanced_intervalo" class="form-control col-sm-5" type="number" value="30" min="5" max="60"
                     step="5">
             </div>
         </div>

@@ -53,3 +53,10 @@ class Base():
                 """
             # mean the vectors of individual words to get the vector of the document
             return np.mean(embeddings, axis=0)
+    
+    def formatar_classes(self, classes):
+
+        nc = []
+        for c in classes.split(','):
+            nc.append("'"+c+"'")
+        return ','.join(nc)

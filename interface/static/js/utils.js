@@ -141,7 +141,7 @@ function classesMarcadas(alvo="classes_ranking"){
             console.log(checkboxes[check].value);
         }
     }
-    return classes_marcadas;
+    return classes_marcadas.join(',');
 }
 
 function pageRanking() {
@@ -151,7 +151,7 @@ function pageRanking() {
     var data = document.getElementById("data").value;
     var meses = document.getElementById("meses").value;
     var n_docs = document.getElementById("n_arquivos_ranking").value;
-    var classes = classesMarcadas().join(',');
+    var classes = classesMarcadas();
 
     $.ajax({
         url: "pageranking/",
@@ -250,6 +250,7 @@ function gerarTimeline(){
     info["query_doc"] = document.getElementById("query_doc").value;
     info["meses"] = document.getElementById("advanced_meses").value;
     info["tam_intervalo"] = document.getElementById("advanced_intervalo").value;
+    info["classes"] = classesMarcadas("classes_timeline");
     input_falso.value = JSON.stringify(info);
     form.appendChild(input_falso);
     document.body.appendChild(form);
