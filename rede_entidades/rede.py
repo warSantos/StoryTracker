@@ -96,7 +96,7 @@ class Rede():
         
         rede.add_edges(arestas)
         rede.es["weight"] = pesos
-        #rede.es["label"] = pesos
+        rede.es["label"] = pesos
 
         # Imprimindo o grafo.
         cont = 0
