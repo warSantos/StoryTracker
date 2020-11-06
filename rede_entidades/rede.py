@@ -113,26 +113,3 @@ class Rede():
 if __name__ == '__main__':
 
     r = Rede()
-
-
-"""
-    def construir_rede(self):
-
-        # construir rede.
-        rede = Graph()
-        l = list(self.ents.keys())
-        l.sort()
-        lista_ents = enumerate(l)
-        # Para cada entidade.
-        for ent in lista_ents:
-            # Se a entidade for uma pessoa e ela aparecer em mais de 5.
-            # documentos.
-            if (self.map_ents[ent[1]] == "PER"
-                    or self.map_ents[ent[1]] == "ORG"
-                    or self.map_ents[ent[1]] == "NORP") \
-                    and len(self.ents[ent[1]]) > 3:
-
-                print(ent)
-
-        return rede
-    """

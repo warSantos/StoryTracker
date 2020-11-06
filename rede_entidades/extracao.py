@@ -8,17 +8,16 @@ class Extracao():
 
         self.nlp = spacy.load('pt_core_news_md')
         df = pd.read_csv('../dados/articles_limpo.csv')
-        self.df = df[df["category"] == 'poder']
-        self.classes = {
-            'PER',
-            'ORG',
-            'GPE',
-            'LOC',
-            'FAC',
-            'NORP',
-            'EVENT'
-        }
+        df = df[(df['date'] >= '2016-08-01') & (df['date'] <= '2016-09-14')]
+        self.df = df[(df["category"] == 'poder') | (df["category"] == 'mundo') | (df["category"] == 'mercado')]
+        with open('configs/ext_classes.json', 'r') as f:
+            self.classes = json.load(f)
     
+    def desambiguidade(self, lista_docs, entidades):
+
+        
+
+
     def extrair(self):
 
         lista_docs = []
@@ -27,8 +26,8 @@ class Extracao():
 
         doc_id = 0
         # Extração de nomes de entidades.
-        for tupla in self.df.head(1000).itertuples(index=False):
-        #for tupla in self.df.itertuples(index=False):
+        #for tupla in self.df.head(100).itertuples(index=False):
+        for tupla in self.df.itertuples(index=False):
             doc = self.nlp(tupla.text)
             ents_doc = {}
             # Para toda entidade no documento.
@@ -54,21 +53,21 @@ class Extracao():
             lista_docs.append([doc_id, tupla.date, ents_doc])
             doc_id += 1
 
-        pt = open('preproc/docs_ents_exemplo.json','w')
-        json.dump(lista_docs, pt, ensure_ascii=False, indent=4)
-        #pt = open('preproc/docs_ents.json','w')
-        #json.dump(lista_docs, pt, ensure_ascii=False)
+        #pt = open('preproc/docs_ents_exemplo.json','w')
+        #json.dump(lista_docs, pt, ensure_ascii=False, indent=4)
+        pt = open('preproc/docs_ents.json','w')
+        json.dump(lista_docs, pt, ensure_ascii=False)
         pt.close()
 
-        pt = open('preproc/entidades_exemplo.json','w')
-        json.dump(entidades, pt, ensure_ascii=False, indent=4)
-        #pt = open('preproc/entidades.json','w')
-        #json.dump(entidades, pt, ensure_ascii=False)
+        #pt = open('preproc/entidades_exemplo.json','w')
+        #json.dump(entidades, pt, ensure_ascii=False, indent=4)
+        pt = open('preproc/entidades.json','w')
+        json.dump(entidades, pt, ensure_ascii=False)
 
-        pt = open('preproc/map_ents_exemplo.json','w')
-        json.dump(dic_ents, pt, ensure_ascii=False, indent=4)
-        #pt = open('preproc/map_ents.json','w')
-        #json.dump(dic_ents, pt, ensure_ascii=False)
+        #pt = open('preproc/map_ents_exemplo.json','w')
+        #json.dump(dic_ents, pt, ensure_ascii=False, indent=4)
+        pt = open('preproc/map_ents.json','w')
+        json.dump(dic_ents, pt, ensure_ascii=False)
         pt.close()
 
 if __name__=='__main__':
