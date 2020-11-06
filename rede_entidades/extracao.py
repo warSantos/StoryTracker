@@ -12,11 +12,6 @@ class Extracao():
         self.df = df[(df["category"] == 'poder') | (df["category"] == 'mundo') | (df["category"] == 'mercado')]
         with open('configs/ext_classes.json', 'r') as f:
             self.classes = json.load(f)
-    
-    def desambiguidade(self, lista_docs, entidades):
-
-        
-
 
     def extrair(self):
 
