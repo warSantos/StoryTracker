@@ -6,9 +6,9 @@ class Extracao():
 
     def __init__(self):
 
-        self.nlp = spacy.load('pt_core_news_md')
+        self.nlp = spacy.load('pt_core_news_lg')
         df = pd.read_csv('../dados/articles_limpo.csv')
-        df = df[(df['date'] >= '2016-08-01') & (df['date'] <= '2016-09-14')]
+        df = df[(df['date'] >= '2016-05-01') & (df['date'] <= '2016-12-01')]
         self.df = df[(df["category"] == 'poder') | (df["category"] == 'mundo') | (df["category"] == 'mercado')]
         with open('configs/ext_classes.json', 'r') as f:
             self.classes = json.load(f)

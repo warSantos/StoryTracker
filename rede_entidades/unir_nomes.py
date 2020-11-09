@@ -1,5 +1,6 @@
 import os
 import json
+from Levenshtein import ratio
 
 
 class UnirNomes():
@@ -22,15 +23,16 @@ class UnirNomes():
         self.classes = json.load(fd)
         fd.close()
     
-    def filtro(self, classe):
+    def filtro(self, classe, ent):
 
-        if classe == 'PER':
+        if classe == 'PER' and len(ent) > 3 and len(self.ents[ent]) > 50:
             return True
         return False
 
+    # Unindo nomes por documento.
     def unir_nomes(self):
 
-        # Unindo nomes por documento.
+        # Para cada documento.
         for doc in self.docs_ents:
             print("NOVO DOC: ",'*'*70)
             ents_delete = []
@@ -42,19 +44,22 @@ class UnirNomes():
             while i < len_ents:
                 ids = []
                 # Se a classe dela for de uma pessoa.
-                if self.filtro(doc[2][ents[i]][0]):
+                if self.filtro(doc[2][ents[i]][0], ents[i]):
                     j = i + 1
                     # Para as demais entidades.
                     while j < len_ents:
-                        if self.filtro(doc[2][ents[j]][0]) and \
-                            ents[j].find(ents[i]) > 0:
-                            ids.append(j)
-                            print("Matching: ", ents[i],",", \
-                                doc[2][ents[i]][1],",", \
-                                len(self.ents[ents[i]]),",", \
-                                ents[j],",", \
-                                doc[2][ents[j]][1],",", \
-                                len(self.ents[ents[j]]))
+                        if self.filtro(doc[2][ents[j]][0], ents[j]):
+                            if ents[j].find(ents[i]) > 0:
+                                ids.append(j)
+                                print("Matching: ", ents[i],",", \
+                                    doc[2][ents[i]][1],",", \
+                                    len(self.ents[ents[i]]),",", \
+                                    ents[j],",", \
+                                    doc[2][ents[j]][1],",", \
+                                    len(self.ents[ents[j]]))
+                        else:
+                            #print("ORG: ", ents[j], doc[2][ents[j]])
+                            ents_delete.append(ents[j])
                         j += 1
                     
                     # Unindo as entidades.
@@ -71,12 +76,42 @@ class UnirNomes():
                         # Atualizando na lista de entidades a serem removidas.
                         ents_delete.append(ents[i])
                         print(ents[i], len(self.ents[ents[i]]), "Foi para ->: ", ents[index], len(self.ents[ents[index]]))
+                else:
+                    ents_delete.append(ents[i])
                 i += 1
             # Removendo as entidades redefinidas.
-            for ent in ents_delete:
+            for ent in set(ents_delete):
                 del doc[2][ent]
+
+    # Unindo os documentos nível global
+    def unir_nomes_global(self):
+        
+        # Unindo todas as entidades em um único dicionário.
+        global_ents = {}
+        # Para cada documento.
+        for doc in self.docs_ents:
+            for ent in doc[2]:
+                if ent not in global_ents:
+                    global_ents[ent] = doc[2][ent]
+        
+        ents = list(global_ents.keys())
+        ents.sort(key=lambda x: len(x))
+        
+        # Combinando entidades par a par.
+        i = 0
+        lista_ents = []
+        while i < len(ents):
+            j = i + 1    
+            while j < len(ents):
+                #lista_ents.append([ents[i], ents[j], ratio(ents[i], ents[j])])
+                if ents[j].find(ents[i]) > -1:
+                    print(ents[i],ents[j])
+                j += 1
+            i += 1
+        
 
 if __name__=='__main__':
 
     u = UnirNomes()
     u.unir_nomes()
+    u.unir_nomes_global()
