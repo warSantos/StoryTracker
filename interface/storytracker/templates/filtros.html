@@ -5,43 +5,48 @@
 
 {% block content %}
 <!-- Barra de pesquisa. -->
-<div class="bg-secondary input-group rounded-pill p-2 justify-content-between" style="height: 7vh;">
+<div class="d-flex flex-wrap bg-secondary rounded-pill p-1">
     <!-- Input para query. -->
-    <div class="form-group d-flex flex-row pr-4 mr-4">
-        <input id="texto" type="search" class="input-sm col-sm-12" placeholder="Type your query"
-            aria-describedby="button-addon3" class="form-control bg-none border-0">
-        <button type="button" class="btn btn-info ml-1" onclick="pageRanking()">
-            <span class="glyphicon glyphicon-search"></span> Search
+    <div class="d-flex form-group mr-auto">
+        <input id="texto" type="search" class="form-control form-control-sm col-sm-12" placeholder="Type your query"
+            aria-describedby="button-addon3">
+        <div>
+            <button type="button" class="btn btn-sm btn-info" onclick="pageRanking()">
+                <span class="glyphicon glyphicon-search"></span> Search
+        </div>
         </button>
     </div>
     <!-- Input para a data. -->
-    <div class="form-group d-flex flex-row ">
-        <label for="data" class="col-form-label"><span class="badge badge-dark">Base Date:</span></label>
-        <div class="col-9">
-            <input id="data" class="form-control" type="date" value="2016-04-01">
+    <div class="d-flex form-group ml-auto">
+        <label for="data"><span class="badge badge-dark">Base Date:</span></label>
+        <div>
+            <input id="data" class="form-control form-control-sm" type="date" value="2016-04-01">
         </div>
     </div>
     <!-- Input para a quantidade de meses para o intervalo de pesquisa. -->
-    <div class="form-group d-flex flex-row ">
-        <label for="meses" class="col-form-label "><span class="badge badge-dark">Months:</span></label>
+    <div class="d-flex form-group ml-auto">
+        <label for="meses"><span class="badge badge-dark">Months:</span></label>
         <div>
-            <input class="form-control col-sm-5" type="number" value="3" id="meses" min="1" max="4">
+            <input id="meses" class="form-control form-control-sm col-sm-4" type="number" value="3" min="1" max="4">
         </div>
     </div>
     <!-- Input para a quantidade de arquivos mostrados no ranking. -->
-    <div class="form-group d-flex flex-row ">
-        <label for="n_arquivos_ranking" class="col-form-label"><span class="badge badge-dark">News:</span></label>
+    <div class="d-flex form-group">
+        <label for="n_arquivos_ranking"><span class="badge badge-dark">News:</span></label>
         <div>
-            <input class="form-control col-sm-5" type="number" value="12" id="n_arquivos_ranking" min="3" max="12">
+            <input id="n_arquivos_ranking" class="form-control form-control-sm col-sm-4" type="number" value="12"
+                min="3" max="12">
         </div>
     </div>
     <!-- Botão para mostrar div de pesquisa avançada. -->
-    <p>
-        <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseExample"
-            aria-expanded="false" aria-controls="collapseExample">
-            Advanced Search
-        </button>
-    </p>
+    <div>
+        <p>
+            <button class="btn btn-dark btn-sm" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Advanced Search
+            </button>
+        </p>
+    </div>
 </div>
 <!-- Barra de pesquisa avançada. -->
 <div class="collapse" id="collapseExample">
@@ -179,12 +184,13 @@
     </div>
 
 </div>
-<!-- Painel de exibição dos documentos. -->
-<div class="w-95 p-4 float-left" id="painel">
-</div>
+<!-- Botão para gerar a timeline. -->
 <div>
     <button type="button" class="btn btn-info" id="botao_timeline" style="display:none;" onclick="gerarTimeline()">Gerar
         Timeline</button>
+</div>
+<!-- Painel de exibição dos documentos. -->
+<div class="w3-display-container d-flex flex-wrap p-4 float-left" id="painel">
 </div>
 {% endblock %}
 {% block scripts %}

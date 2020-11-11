@@ -212,28 +212,30 @@ class TimelineModel(models.Model):
             # Configurando o texto
             # Configurando o texto do documento principal.
             # Configurando a div para deixar os documentos em linha.
-            div_mae = "<div class=\"d-flex flex-row\">"
-            text = div_mae + """<div class=\"card m-2\" style=\"width: 18rem;\">
+            div_mae = "<div class=\"d-flex flex-wrap\" style=\"width: 100%;\">"
+            text = div_mae + """<div class=\"card m-2\" style=\"width: 14rem;\">
                 <div class=\"card-body\"><p class=\"card-text\">
                     <p>"""+doc_principal["titulo"]+"""</p>
                     <a href=\""""+doc_principal["link"]+"""\" class=\"btn btn-info\">Visitar notícia</a>
                 </div>
             </div>"""
-            cont = 1
+            #cont = 1
             # Para cada documento no intervalo.
             for doc in intervalo:
-                text += """<div class=\"card m-2\" style=\"width: 18rem;\">
+                text += """<div class=\"card m-2\" style=\"width: 14rem;\">
                     <div class=\"card-body\"><p class=\"card-text\">
                         <p>"""+doc["titulo"]+"""</p>
                         <a href=\""""+doc["link"]+"""\" class=\"btn btn-info\">Visitar notícia</a>
                     </div>
                 </div>"""
-                if cont == 4:
+                """
+                if cont == 3:
                     text += "</div>"
                     text += div_mae
                     cont = -1
                 cont += 1
-
+                """
+            text += "</div>"
             evento["text"]["text"] = text
             eventos[1]["events"].append(evento)
         return json.dumps(eventos)
