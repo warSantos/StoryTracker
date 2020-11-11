@@ -1,0 +1,5534 @@
+[
+    [
+        0,
+        "2016-09-12",
+        {
+            "sergio moro": [
+                "PER",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "pmdb": [
+                "ORG",
+                3
+            ],
+            "eduardo cunha": [
+                "PER",
+                1
+            ],
+            "pmdb-rj": [
+                "ORG",
+                1
+            ],
+            "petrobras": [
+                "ORG",
+                6
+            ],
+            "temer": [
+                "ORG",
+                2
+            ],
+            "cunha": [
+                "PER",
+                3
+            ],
+            "lava jato": [
+                "ORG",
+                1
+            ],
+            "moro": [
+                "PER",
+                1
+            ],
+            "jorge zelada": [
+                "PER",
+                1
+            ],
+            "internacional": [
+                "ORG",
+                1
+            ],
+            "fernando diniz": [
+                "PER",
+                1
+            ],
+            "josé carlos bumlai": [
+                "PER",
+                1
+            ],
+            "nestor cerveró": [
+                "PER",
+                1
+            ],
+            "cerveró": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        1,
+        "2016-09-12",
+        {
+            "cabral": [
+                "PER",
+                5
+            ],
+            "instituto médico legal": [
+                "ORG",
+                1
+            ],
+            "folha": [
+                "PER",
+                1
+            ],
+            "assembleia legislativa": [
+                "ORG",
+                1
+            ],
+            "jorge picciani": [
+                "PER",
+                1
+            ],
+            "pmdb": [
+                "ORG",
+                2
+            ],
+            "washington reis": [
+                "PER",
+                1
+            ],
+            "cidinha campos": [
+                "PER",
+                1
+            ],
+            "pdt": [
+                "ORG",
+                1
+            ],
+            "marcelo bretas": [
+                "PER",
+                1
+            ],
+            "ary bergher": [
+                "PER",
+                1
+            ],
+            "raphael mattos": [
+                "PER",
+                1
+            ],
+            "tribunal regional federal": [
+                "ORG",
+                1
+            ],
+            "bretas": [
+                "PER",
+                2
+            ],
+            "adriana ancelmo": [
+                "PER",
+                1
+            ],
+            "justiça federal": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        2,
+        "2016-09-12",
+        {
+            "sergio moro": [
+                "PER",
+                2
+            ],
+            "petrobras": [
+                "ORG",
+                2
+            ],
+            "dw brasil": [
+                "ORG",
+                1
+            ],
+            "aécio neves": [
+                "PER",
+                2
+            ],
+            "psdb-mg": [
+                "ORG",
+                1
+            ],
+            "moro": [
+                "PER",
+                6
+            ],
+            "justiça federal de curitiba": [
+                "ORG",
+                1
+            ],
+            "odebrecht": [
+                "ORG",
+                2
+            ],
+            "andrade gutierrez": [
+                "PER",
+                1
+            ],
+            "ptb": [
+                "PER",
+                1
+            ],
+            "solidariedade": [
+                "PER",
+                1
+            ],
+            "pp": [
+                "ORG",
+                1
+            ],
+            "pt": [
+                "ORG",
+                1
+            ],
+            "geraldo alckmin": [
+                "PER",
+                1
+            ],
+            "psdb": [
+                "ORG",
+                2
+            ],
+            "lava jato": [
+                "ORG",
+                3
+            ],
+            "executivo e legislativo": [
+                "ORG",
+                1
+            ],
+            "universidade de heidelberg": [
+                "ORG",
+                1
+            ],
+            "pmdb": [
+                "ORG",
+                1
+            ],
+            "dilma rousseff": [
+                "PER",
+                1
+            ],
+            "luiz inácio lula da silva": [
+                "PER",
+                1
+            ],
+            "dilma": [
+                "PER",
+                1
+            ],
+            "legislativo": [
+                "ORG",
+                1
+            ],
+            "renan calheiros": [
+                "PER",
+                1
+            ],
+            "pmdb-al": [
+                "ORG",
+                1
+            ],
+            "marco aurélio mello": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        3,
+        "2016-09-12",
+        {
+            "odebrecht": [
+                "ORG",
+                10
+            ],
+            "josé yunes": [
+                "PER",
+                3
+            ],
+            "michel temer": [
+                "PER",
+                2
+            ],
+            "pmdb": [
+                "ORG",
+                9
+            ],
+            "cláudio melo filho": [
+                "PER",
+                2
+            ],
+            "relações institucionais": [
+                "PER",
+                1
+            ],
+            "lava jato": [
+                "ORG",
+                3
+            ],
+            "casa civil": [
+                "PER",
+                3
+            ],
+            "eliseu padilha": [
+                "PER",
+                4
+            ],
+            "temer": [
+                "PER",
+                8
+            ],
+            "marcelo odebrecht": [
+                "PER",
+                5
+            ],
+            "yunes": [
+                "PER",
+                2
+            ],
+            "sr. josé yunes": [
+                "PER",
+                1
+            ],
+            "paulo skaf": [
+                "PER",
+                1
+            ],
+            "melo filho": [
+                "PER",
+                1
+            ],
+            "padilha": [
+                "PER",
+                2
+            ],
+            "área de operações estruturadas": [
+                "ORG",
+                1
+            ],
+            "moreira franco": [
+                "PER",
+                3
+            ],
+            "investimentos": [
+                "PER",
+                1
+            ],
+            "melo": [
+                "PER",
+                1
+            ],
+            "geddel vieira lima": [
+                "PER",
+                2
+            ],
+            "renan calheiros": [
+                "PER",
+                3
+            ],
+            "pmdb-al": [
+                "ORG",
+                2
+            ],
+            "romero jucá": [
+                "PER",
+                3
+            ],
+            "pmdb-rr": [
+                "ORG",
+                2
+            ],
+            "eunício oliveira": [
+                "PER",
+                2
+            ],
+            "pmdb-ce": [
+                "ORG",
+                2
+            ],
+            "câmara": [
+                "ORG",
+                1
+            ],
+            "rodrigo maia": [
+                "PER",
+                2
+            ],
+            "dem-rj": [
+                "PER",
+                2
+            ],
+            "botafogo": [
+                "ORG",
+                1
+            ],
+            "jucá": [
+                "PER",
+                2
+            ],
+            "renan": [
+                "PER",
+                1
+            ],
+            "graça foster": [
+                "PER",
+                1
+            ],
+            "petrobras": [
+                "ORG",
+                1
+            ],
+            "teori zavascki": [
+                "ORG",
+                1
+            ],
+            "lúcio vieira lima": [
+                "PER",
+                1
+            ],
+            "pmdb-ba": [
+                "ORG",
+                1
+            ],
+            "braskem": [
+                "ORG",
+                2
+            ],
+            "tse": [
+                "ORG",
+                3
+            ],
+            "tribunal superior eleitoral": [
+                "ORG",
+                1
+            ],
+            "outro lado  ": [
+                "ORG",
+                1
+            ],
+            "justiça eleitoral": [
+                "ORG",
+                3
+            ],
+            "cláudio": [
+                "PER",
+                1
+            ],
+            "construtora odebrecht": [
+                "ORG",
+                1
+            ],
+            "claudio melo filho": [
+                "PER",
+                1
+            ],
+            "ppi": [
+                "PER",
+                1
+            ],
+            "josé agripino maia": [
+                "PER",
+                1
+            ],
+            "dem-rn": [
+                "PER",
+                1
+            ],
+            "eduardo cunha": [
+                "PER",
+                1
+            ],
+            "pedro ivo velloso": [
+                "PER",
+                1
+            ],
+            "heráclito fortes": [
+                "PER",
+                1
+            ],
+            "colaboraram": [
+                "ORG",
+                1
+            ],
+            "júlio wiziack": [
+                "PER",
+                1
+            ],
+            "débora álvares": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        4,
+        "2016-09-12",
+        {
+            "cristina kirchner": [
+                "PER",
+                1
+            ],
+            "maurício macri": [
+                "PER",
+                2
+            ],
+            "dilma rousseff": [
+                "PER",
+                1
+            ],
+            "fundação perseu abramo": [
+                "ORG",
+                1
+            ],
+            "kirchner": [
+                "ORG",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "pmdb": [
+                "ORG",
+                1
+            ],
+            "luiz inácio lula da silva": [
+                "PER",
+                1
+            ],
+            "ministério da defesa": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        5,
+        "2016-09-12",
+        {
+            "dilma rousseff": [
+                "PER",
+                1
+            ],
+            "fhc": [
+                "PER",
+                2
+            ],
+            "luiz inácio lula da silva": [
+                "PER",
+                1
+            ],
+            "petrobras": [
+                "ORG",
+                1
+            ],
+            "eletrobras": [
+                "ORG",
+                1
+            ],
+            "getúlio": [
+                "PER",
+                1
+            ],
+            "dilma": [
+                "ORG",
+                1
+            ],
+            "fundação perseu abramo": [
+                "ORG",
+                1
+            ],
+            "cristina kirchner": [
+                "PER",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "pmdb": [
+                "ORG",
+                1
+            ],
+            "previdência": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        6,
+        "2016-09-12",
+        {
+            "pec": [
+                "ORG",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "pmdb": [
+                "ORG",
+                1
+            ],
+            "eunício oliveira": [
+                "PER",
+                1
+            ],
+            "pmdb-ce": [
+                "ORG",
+                1
+            ],
+            "diálogo  ": [
+                "ORG",
+                1
+            ],
+            "câmara eduardo cunha": [
+                "ORG",
+                1
+            ],
+            "pmdb-rj": [
+                "ORG",
+                1
+            ],
+            "antonio imbassahy": [
+                "PER",
+                1
+            ],
+            "psdb-ba": [
+                "ORG",
+                1
+            ],
+            "previdência na câmara": [
+                "ORG",
+                1
+            ],
+            "temer": [
+                "ORG",
+                3
+            ],
+            "previdência": [
+                "ORG",
+                1
+            ],
+            "inss": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        7,
+        "2016-09-12",
+        {
+            "banco central": [
+                "ORG",
+                1
+            ],
+            "ilan goldfajn": [
+                "ORG",
+                1
+            ],
+            "copom": [
+                "ORG",
+                1
+            ],
+            "comitê de política monetária": [
+                "ORG",
+                1
+            ],
+            "ilan": [
+                "ORG",
+                4
+            ],
+            "selic": [
+                "ORG",
+                3
+            ],
+            "bc": [
+                "ORG",
+                5
+            ],
+            "previdência": [
+                "ORG",
+                1
+            ],
+            "proposta de emenda à constituição": [
+                "ORG",
+                1
+            ],
+            "pec": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        8,
+        "2016-09-12",
+        {
+            "comissão de orçamento da assembleia legislativa do rio de janeiro": [
+                "ORG",
+                1
+            ],
+            "alerj": [
+                "ORG",
+                1
+            ],
+            "luiz paulo correa da rocha": [
+                "PER",
+                1
+            ],
+            "psdb": [
+                "ORG",
+                1
+            ],
+            "pedro fernandes": [
+                "PER",
+                1
+            ],
+            "pmdb": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        9,
+        "2016-09-12",
+        {
+            "ney santos": [
+                "PER",
+                1
+            ],
+            "prb": [
+                "ORG",
+                1
+            ],
+            "justiça": [
+                "ORG",
+                1
+            ],
+            "pcc": [
+                "ORG",
+                2
+            ],
+            "santos": [
+                "ORG",
+                1
+            ],
+            "xibalba": [
+                "PER",
+                1
+            ],
+            "gaeco": [
+                "ORG",
+                1
+            ],
+            "grupo de atuação especial de combate ao crime organizado": [
+                "ORG",
+                1
+            ],
+            "psc": [
+                "ORG",
+                1
+            ],
+            "dr. pedro valdir": [
+                "PER",
+                1
+            ],
+            "psd": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        10,
+        "2016-09-12",
+        {
+            "renan calheiros": [
+                "PER",
+                1
+            ],
+            "pmdb-al": [
+                "ORG",
+                1
+            ],
+            "renan": [
+                "PER",
+                1
+            ],
+            "previdência": [
+                "ORG",
+                1
+            ],
+            "cleber alessie": [
+                "PER",
+                1
+            ],
+            "pec": [
+                "ORG",
+                1
+            ],
+            "proposta de emenda constitucional": [
+                "ORG",
+                1
+            ],
+            "segundo alessie": [
+                "PER",
+                1
+            ],
+            "opep": [
+                "ORG",
+                1
+            ],
+            "organização dos países exportadores de petróleo": [
+                "ORG",
+                1
+            ],
+            "selic": [
+                "ORG",
+                2
+            ],
+            "bc": [
+                "ORG",
+                1
+            ],
+            "ilan goldfajn": [
+                "ORG",
+                1
+            ],
+            "reuters": [
+                "ORG",
+                1
+            ],
+            "bolsa": [
+                "ORG",
+                2
+            ],
+            "petrobras": [
+                "ORG",
+                1
+            ],
+            "pn": [
+                "ORG",
+                1
+            ],
+            "on": [
+                "ORG",
+                2
+            ],
+            "vale": [
+                "ORG",
+                1
+            ],
+            "itaú unibanco pn": [
+                "ORG",
+                1
+            ],
+            "bradesco pn": [
+                "ORG",
+                1
+            ],
+            "bradesco on": [
+                "ORG",
+                1
+            ],
+            "banco do brasil on": [
+                "ORG",
+                1
+            ],
+            "bm&fbovespa on": [
+                "ORG",
+                1
+            ],
+            "gerdau pn": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        11,
+        "2016-09-12",
+        {
+            "antonio imbassahy": [
+                "PER",
+                1
+            ],
+            "psdb-ba": [
+                "ORG",
+                1
+            ],
+            "secretaria de governo": [
+                "ORG",
+                3
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "imbassahy": [
+                "PER",
+                4
+            ],
+            "geddel vieira lima": [
+                "PER",
+                1
+            ],
+            "pmdb": [
+                "PER",
+                1
+            ],
+            "psdb": [
+                "ORG",
+                3
+            ],
+            "temer": [
+                "PER",
+                5
+            ],
+            "psd": [
+                "ORG",
+                1
+            ],
+            "pp": [
+                "ORG",
+                1
+            ],
+            "câmara": [
+                "ORG",
+                2
+            ],
+            "previdência": [
+                "ORG",
+                2
+            ],
+            "tasso jereissati": [
+                "PER",
+                1
+            ],
+            "psdb-ce": [
+                "ORG",
+                1
+            ],
+            "jereissati": [
+                "PER",
+                1
+            ],
+            "rodrigo maia": [
+                "PER",
+                1
+            ],
+            "dem-rj": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        12,
+        "2016-09-12",
+        {
+            "divulgado": [
+                "ORG",
+                1
+            ],
+            "ibovespa": [
+                "ORG",
+                2
+            ],
+            "dilma rousseff": [
+                "PER",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "temer": [
+                "PER",
+                2
+            ],
+            "pedro costa ferreira": [
+                "PER",
+                1
+            ],
+            "executivo": [
+                "ORG",
+                1
+            ],
+            "legislativo": [
+                "ORG",
+                1
+            ],
+            "josé dirceu": [
+                "PER",
+                1
+            ],
+            "petrobras": [
+                "ORG",
+                1
+            ],
+            "pt": [
+                "ORG",
+                1
+            ],
+            "roberto jefferson": [
+                "PER",
+                1
+            ],
+            "ptb": [
+                "ORG",
+                1
+            ],
+            "fgv": [
+                "ORG",
+                1
+            ],
+            "lehman brothers": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        13,
+        "2016-09-12",
+        {
+            "fenaprevi": [
+                "ORG",
+                1
+            ],
+            "edson franco": [
+                "PER",
+                1
+            ],
+            "franco": [
+                "PER",
+                1
+            ],
+            "cnseg": [
+                "ORG",
+                1
+            ],
+            "confederação nacional das empresas de seguros gerais": [
+                "ORG",
+                1
+            ],
+            "previdência privada e vida": [
+                "ORG",
+                1
+            ],
+            "marcio coriolano": [
+                "PER",
+                1
+            ],
+            "coriolano": [
+                "PER",
+                1
+            ],
+            "federação nacional de seguros gerais": [
+                "ORG",
+                1
+            ],
+            "fenseg": [
+                "ORG",
+                1
+            ],
+            "joão francisco da costa": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        14,
+        "2016-09-12",
+        {
+            "geraldo alckmin": [
+                "PER",
+                2
+            ],
+            "psdb": [
+                "ORG",
+                2
+            ],
+            "odebrecht": [
+                "ORG",
+                5
+            ],
+            "ricardo salles": [
+                "PER",
+                1
+            ],
+            "pp-sp": [
+                "ORG",
+                1
+            ],
+            "vanderlei macris": [
+                "PER",
+                1
+            ],
+            "psdb-sp": [
+                "ORG",
+                1
+            ],
+            "alckmin": [
+                "PER",
+                3
+            ],
+            "adhemar ribeiro": [
+                "PER",
+                1
+            ],
+            "lu alckmin": [
+                "PER",
+                1
+            ],
+            "marcos monteiro": [
+                "PER",
+                1
+            ],
+            "ivan valente": [
+                "PER",
+                1
+            ],
+            "psol-sp": [
+                "ORG",
+                1
+            ],
+            "metrô": [
+                "PER",
+                1
+            ],
+            "pmdb": [
+                "ORG",
+                1
+            ],
+            "pt": [
+                "ORG",
+                2
+            ],
+            "valente": [
+                "PER",
+                1
+            ],
+            "petrobras": [
+                "ORG",
+                1
+            ],
+            "oas": [
+                "ORG",
+                1
+            ],
+            "psol": [
+                "PER",
+                1
+            ],
+            "outro lado  ": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        15,
+        "2016-09-12",
+        {
+            "reinaldo domingos": [
+                "PER",
+                1
+            ],
+            "mauro calil": [
+                "PER",
+                1
+            ],
+            "academia do dinheiro": [
+                "ORG",
+                1
+            ],
+            "momondo": [
+                "ORG",
+                1
+            ],
+            "maria inês dolci": [
+                "PER",
+                1
+            ],
+            "justiça": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        16,
+        "2016-09-12",
+        {
+            "lava jato": [
+                "ORG",
+                2
+            ],
+            "câmara": [
+                "ORG",
+                2
+            ],
+            "casa": [
+                "PER",
+                1
+            ],
+            "dem-rj": [
+                "PER",
+                1
+            ],
+            "pp-ma": [
+                "PER",
+                1
+            ],
+            "maurício vargas": [
+                "PER",
+                1
+            ],
+            "eduardo cunha": [
+                "PER",
+                1
+            ],
+            "pmdb-rj": [
+                "ORG",
+                1
+            ],
+            "vargas": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        17,
+        "2016-09-12",
+        {
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "pt": [
+                "ORG",
+                1
+            ],
+            "temer": [
+                "PER",
+                5
+            ],
+            "ciro": [
+                "PER",
+                1
+            ],
+            "cid gomes": [
+                "PER",
+                1
+            ],
+            "pdt": [
+                "ORG",
+                1
+            ],
+            "hélder barbalho": [
+                "PER",
+                1
+            ],
+            "integração nacional": [
+                "ORG",
+                1
+            ],
+            "bruno araújo": [
+                "PER",
+                1
+            ],
+            "cidades": [
+                "PER",
+                1
+            ],
+            "marcos beltrão": [
+                "PER",
+                1
+            ],
+            "turismo": [
+                "ORG",
+                1
+            ],
+            "eunício oliveira": [
+                "PER",
+                1
+            ],
+            "pmdb-ce": [
+                "ORG",
+                1
+            ],
+            "tasso jereissati": [
+                "PER",
+                1
+            ],
+            "psdb-ce": [
+                "ORG",
+                1
+            ],
+            "natural": [
+                "ORG",
+                1
+            ],
+            "casa civil": [
+                "PER",
+                1
+            ],
+            "eliseu padilha": [
+                "PER",
+                1
+            ],
+            "padilha": [
+                "PER",
+                1
+            ],
+            "kleber": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        18,
+        "2016-09-12",
+        {
+            "bndes": [
+                "ORG",
+                3
+            ],
+            "conselho de administração": [
+                "ORG",
+                1
+            ],
+            "operação lava-jato": [
+                "ORG",
+                1
+            ],
+            "odebrecht": [
+                "ORG",
+                1
+            ],
+            "odebrecht transport": [
+                "ORG",
+                1
+            ],
+            "tcu": [
+                "ORG",
+                1
+            ],
+            "tribunal de contas da união": [
+                "ORG",
+                1
+            ],
+            "infraero": [
+                "ORG",
+                1
+            ],
+            "marilene ramos": [
+                "PER",
+                1
+            ],
+            "ramos": [
+                "PER",
+                3
+            ],
+            "banco": [
+                "ORG",
+                1
+            ],
+            "taxa de juros de longo prazo": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        19,
+        "2016-09-12",
+        {
+            "luiz inácio lula da silva": [
+                "PER",
+                1
+            ],
+            "luiz cláudio lula da silva": [
+                "PER",
+                1
+            ],
+            "operação zelotes": [
+                "ORG",
+                2
+            ],
+            "gripen": [
+                "ORG",
+                1
+            ],
+            "lula": [
+                "PER",
+                17
+            ],
+            "lft marketing esportivo": [
+                "ORG",
+                1
+            ],
+            "luís cláudio": [
+                "PER",
+                1
+            ],
+            "mauro marcondes": [
+                "PER",
+                1
+            ],
+            "cristina mautoni": [
+                "PER",
+                1
+            ],
+            "dilma rousseff": [
+                "PER",
+                2
+            ],
+            "mpf": [
+                "ORG",
+                2
+            ],
+            "ex-presidente lula": [
+                "PER",
+                1
+            ],
+            "luiz cláudio": [
+                "PER",
+                1
+            ],
+            "caoa": [
+                "ORG",
+                1
+            ],
+            "justiça federal de brasília": [
+                "ORG",
+                1
+            ],
+            "vallisney de souza oliveira": [
+                "PER",
+                1
+            ],
+            "oliveira": [
+                "PER",
+                1
+            ],
+            "nestor cerveró": [
+                "PER",
+                1
+            ],
+            "odebrecht": [
+                "ORG",
+                1
+            ],
+            "bndes": [
+                "ORG",
+                1
+            ],
+            "taiguara rodrigues dos santos": [
+                "PER",
+                1
+            ],
+            "oas": [
+                "ORG",
+                1
+            ],
+            "luis cláudio": [
+                "PER",
+                1
+            ],
+            "cristiano zanin martins": [
+                "PER",
+                1
+            ],
+            "roberto teixeira": [
+                "PER",
+                1
+            ],
+            "luis claudio": [
+                "PER",
+                2
+            ],
+            "procuradores da república": [
+                "ORG",
+                2
+            ],
+            "saab": [
+                "ORG",
+                1
+            ],
+            "mp": [
+                "ORG",
+                1
+            ],
+            "marcondes & mautoni": [
+                "ORG",
+                1
+            ],
+            "forças armadas brasileiras": [
+                "ORG",
+                1
+            ],
+            "parlamento brasileiro": [
+                "ORG",
+                1
+            ],
+            "conselho nacional do ministério público": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        20,
+        "2016-09-12",
+        {
+            "petrobras": [
+                "ORG",
+                4
+            ],
+            "agência nacional do petróleo": [
+                "ORG",
+                1
+            ],
+            "gás natural e biocombustíveis": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        21,
+        "2016-09-12",
+        {
+            "departamento de serviços": [
+                "ORG",
+                1
+            ],
+            "sem-teto": [
+                "ORG",
+                1
+            ],
+            "bill de blasio": [
+                "PER",
+                1
+            ],
+            "blasio": [
+                "PER",
+                2
+            ],
+            "wnyc": [
+                "ORG",
+                1
+            ],
+            "steven banks": [
+                "PER",
+                1
+            ],
+            "scott m. stringer": [
+                "PER",
+                1
+            ],
+            "zachary w. carter": [
+                "PER",
+                1
+            ],
+            "stringer": [
+                "PER",
+                2
+            ],
+            "de blasio": [
+                "PER",
+                1
+            ],
+            "david neustadt": [
+                "PER",
+                1
+            ],
+            "denise mota": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        22,
+        "2016-09-12",
+        {
+            "21st century fox": [
+                "ORG",
+                1
+            ],
+            "sky": [
+                "ORG",
+                2
+            ],
+            "bolsa de londres": [
+                "ORG",
+                1
+            ],
+            "fox": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        23,
+        "2016-09-12",
+        {
+            "barack obama": [
+                "PER",
+                1
+            ],
+            "obama": [
+                "PER",
+                4
+            ],
+            "lisa monaco": [
+                "PER",
+                1
+            ],
+            "lisa": [
+                "PER",
+                2
+            ],
+            "fbi": [
+                "ORG",
+                1
+            ],
+            "john mccain": [
+                "PER",
+                1
+            ],
+            "partido republicano": [
+                "ORG",
+                1
+            ],
+            "vladmir putin": [
+                "PER",
+                1
+            ],
+            "donald trump": [
+                "PER",
+                1
+            ],
+            "trump": [
+                "PER",
+                1
+            ],
+            "putin": [
+                "PER",
+                1
+            ],
+            "hillary clinton": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        24,
+        "2016-09-12",
+        {
+            "previdência": [
+                "ORG",
+                2
+            ],
+            "pec": [
+                "ORG",
+                1
+            ],
+            "proposta de emenda à constituição": [
+                "ORG",
+                1
+            ],
+            "rômulo saraiva": [
+                "PER",
+                1
+            ],
+            "inss": [
+                "ORG",
+                4
+            ],
+            "adriane bramante": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        25,
+        "2016-09-12",
+        {
+            "michel temer": [
+                "PER",
+                2
+            ],
+            "pmdb": [
+                "ORG",
+                2
+            ],
+            "mário filho": [
+                "PER",
+                1
+            ],
+            "temer": [
+                "PER",
+                5
+            ],
+            "achei": [
+                "PER",
+                1
+            ],
+            "hilário paulo": [
+                "PER",
+                1
+            ],
+            "psd": [
+                "ORG",
+                1
+            ],
+            "exército": [
+                "ORG",
+                1
+            ],
+            "lula": [
+                "PER",
+                1
+            ],
+            "dilma": [
+                "PER",
+                1
+            ],
+            "maria helena miranda": [
+                "PER",
+                1
+            ],
+            "secretaria de comunicação do palácio do planalto": [
+                "ORG",
+                1
+            ],
+            "integração nacional": [
+                "ORG",
+                1
+            ],
+            "hélder barbalho": [
+                "PER",
+                1
+            ],
+            "programa de aceleração do crescimento": [
+                "ORG",
+                1
+            ],
+            "barbalho": [
+                "PER",
+                1
+            ],
+            "jorge brito": [
+                "PER",
+                1
+            ],
+            "carmelita da silva": [
+                "PER",
+                1
+            ],
+            "associação brasileira de vaquejada": [
+                "ORG",
+                1
+            ],
+            "paulo moura": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        26,
+        "2016-09-12",
+        {
+            "nações unidas": [
+                "ORG",
+                1
+            ],
+            "philip alson": [
+                "PER",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "previdência": [
+                "ORG",
+                1
+            ],
+            "congresso": [
+                "ORG",
+                1
+            ],
+            "pec": [
+                "ORG",
+                1
+            ],
+            "alson": [
+                "PER",
+                1
+            ],
+            "temer": [
+                "PER",
+                1
+            ],
+            "pacto internacional dos direitos econômicos, sociais e culturais": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        27,
+        "2016-09-12",
+        {
+            "nelson marchezan jr.": [
+                "PER",
+                1
+            ],
+            "psdb": [
+                "ORG",
+                2
+            ],
+            "marchezan": [
+                "PER",
+                7
+            ],
+            "ccs": [
+                "ORG",
+                3
+            ],
+            "banco de talentos": [
+                "ORG",
+                1
+            ],
+            "daniel guerra": [
+                "PER",
+                1
+            ],
+            "prb": [
+                "ORG",
+                1
+            ],
+            "aécio neves": [
+                "PER",
+                1
+            ],
+            "geraldo alckmin": [
+                "PER",
+                1
+            ],
+            "josé serra": [
+                "PER",
+                1
+            ],
+            "joão doria": [
+                "PER",
+                2
+            ],
+            "movimento brasil competitivo": [
+                "ORG",
+                1
+            ],
+            "mbc": [
+                "ORG",
+                1
+            ],
+            "secretaria de parcerias estratégias": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        28,
+        "2016-09-12",
+        {
+            "petrobras": [
+                "ORG",
+                2
+            ]
+        }
+    ],
+    [
+        29,
+        "2016-09-12",
+        {
+            "ibama": [
+                "ORG",
+                1
+            ],
+            "s11": [
+                "ORG",
+                1
+            ],
+            "vale": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        30,
+        "2016-09-12",
+        {
+            "união europeia": [
+                "ORG",
+                1
+            ],
+            "comissão europeia": [
+                "ORG",
+                3
+            ],
+            "eurofer": [
+                "ORG",
+                1
+            ],
+            "ue": [
+                "ORG",
+                4
+            ],
+            "a ue": [
+                "ORG",
+                1
+            ],
+            "wang hejun": [
+                "PER",
+                2
+            ],
+            "omc": [
+                "ORG",
+                1
+            ],
+            "organização mundial de comércio": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        31,
+        "2016-09-12",
+        {
+            "américa latina": [
+                "ORG",
+                1
+            ],
+            "whirlpool": [
+                "ORG",
+                1
+            ],
+            "lg electronics": [
+                "ORG",
+                1
+            ],
+            "haier": [
+                "ORG",
+                1
+            ],
+            "electrolux": [
+                "ORG",
+                1
+            ],
+            "união europeia": [
+                "ORG",
+                1
+            ],
+            "ue": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        32,
+        "2016-09-12",
+        {
+            "juan manuel santos": [
+                "PER",
+                2
+            ],
+            "forças armadas revolucionárias da colômbia": [
+                "ORG",
+                1
+            ],
+            "ingrid betancourt": [
+                "PER",
+                1
+            ],
+            "câmara": [
+                "ORG",
+                1
+            ],
+            "clara rojas": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        33,
+        "2016-09-12",
+        {
+            "sonny perdue": [
+                "PER",
+                1
+            ],
+            "donald trump": [
+                "PER",
+                1
+            ],
+            "trump": [
+                "ORG",
+                15
+            ],
+            "nick ayers": [
+                "PER",
+                1
+            ],
+            "mike pence": [
+                "PER",
+                2
+            ],
+            "stephen k. bannon": [
+                "PER",
+                1
+            ],
+            "perdue": [
+                "PER",
+                3
+            ],
+            "agricultura": [
+                "ORG",
+                1
+            ],
+            "lou barletta": [
+                "PER",
+                1
+            ],
+            "trabalho": [
+                "ORG",
+                1
+            ],
+            "pouca paciência  ": [
+                "ORG",
+                1
+            ],
+            "newt gingrich": [
+                "PER",
+                1
+            ],
+            "câmara": [
+                "ORG",
+                1
+            ],
+            "gringrich": [
+                "PER",
+                1
+            ],
+            "gingrich": [
+                "PER",
+                1
+            ],
+            "barletta": [
+                "PER",
+                1
+            ],
+            "michael mccaul": [
+                "PER",
+                1
+            ],
+            "segurança interna": [
+                "ORG",
+                1
+            ],
+            "robert l. johnson": [
+                "PER",
+                1
+            ],
+            "bet": [
+                "ORG",
+                1
+            ],
+            "johnson": [
+                "PER",
+                1
+            ],
+            "ivanka trump": [
+                "PER",
+                1
+            ],
+            "david perdue": [
+                "PER",
+                1
+            ],
+            "scott brown": [
+                "PER",
+                1
+            ],
+            "brown": [
+                "PER",
+                2
+            ],
+            "secretaria de veteranos": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        34,
+        "2016-09-12",
+        {
+            "boris fausto": [
+                "PER",
+                2
+            ],
+            "bbc brasil": [
+                "ORG",
+                2
+            ],
+            "aos": [
+                "ORG",
+                1
+            ],
+            "renan calheiros": [
+                "PER",
+                2
+            ],
+            "marco aurélio mello": [
+                "PER",
+                1
+            ],
+            "marco aurélio": [
+                "PER",
+                2
+            ],
+            "renan": [
+                "PER",
+                2
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "fausto": [
+                "PER",
+                2
+            ],
+            "temer": [
+                "PER",
+                4
+            ],
+            "sergio moro": [
+                "PER",
+                2
+            ],
+            "aécio neves": [
+                "PER",
+                2
+            ],
+            "psdb": [
+                "ORG",
+                1
+            ],
+            "lava jato": [
+                "ORG",
+                1
+            ],
+            "pt": [
+                "ORG",
+                1
+            ],
+            "pmdb": [
+                "PER",
+                1
+            ],
+            "donald trump": [
+                "PER",
+                1
+            ],
+            "getúlio vargas": [
+                "PER",
+                1
+            ],
+            "fernando henrique cardoso": [
+                "PER",
+                1
+            ],
+            "previdência": [
+                "ORG",
+                1
+            ],
+            "mp": [
+                "ORG",
+                1
+            ],
+            "justiça federal do paraná": [
+                "ORG",
+                1
+            ],
+            "legislativo": [
+                "ORG",
+                2
+            ],
+            "executivo": [
+                "ORG",
+                1
+            ],
+            "josé linhares": [
+                "PER",
+                1
+            ],
+            "cármen lúcia": [
+                "PER",
+                1
+            ],
+            "lula": [
+                "PER",
+                2
+            ],
+            "aécio": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        35,
+        "2016-09-12",
+        {
+            "união soviética": [
+                "ORG",
+                1
+            ],
+            "sociedade brasileira de numismática": [
+                "ORG",
+                1
+            ],
+            "alexandre barbosa": [
+                "PER",
+                1
+            ],
+            "d. pedro i": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        36,
+        "2016-09-12",
+        {
+            "lava jato": [
+                "ORG",
+                5
+            ],
+            "odebrecht": [
+                "ORG",
+                2
+            ],
+            "petrobras": [
+                "ORG",
+                2
+            ],
+            "pinheiro neto": [
+                "PER",
+                1
+            ],
+            "bertoldi": [
+                "PER",
+                1
+            ],
+            "esther flesch": [
+                "PER",
+                1
+            ],
+            "trench": [
+                "PER",
+                1
+            ],
+            "rossi": [
+                "PER",
+                1
+            ],
+            "watanabe advogados": [
+                "PER",
+                1
+            ],
+            "mattos filho": [
+                "PER",
+                1
+            ],
+            "thiago jabor pinheiro": [
+                "PER",
+                1
+            ],
+            "ronaldo fragoso": [
+                "PER",
+                1
+            ],
+            "pwc": [
+                "ORG",
+                2
+            ],
+            "ey": [
+                "ORG",
+                2
+            ],
+            "kpmg": [
+                "ORG",
+                1
+            ],
+            "ana paula candeloro": [
+                "PER",
+                1
+            ],
+            "fragoso": [
+                "PER",
+                1
+            ],
+            "marcelo odebrecht": [
+                "PER",
+                1
+            ],
+            "bradesco": [
+                "ORG",
+                1
+            ],
+            "luiz carlos trabuco": [
+                "PER",
+                1
+            ],
+            "josé compagno": [
+                "PER",
+                1
+            ],
+            "américa latina": [
+                "ORG",
+                1
+            ],
+            "marco castro": [
+                "PER",
+                1
+            ],
+            "longo caminho  ": [
+                "ORG",
+                1
+            ],
+            "nicole verillo": [
+                "PER",
+                1
+            ],
+            "nicole": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        37,
+        "2016-09-12",
+        {
+            "renata bueno": [
+                "PER",
+                1
+            ],
+            "sergio mattarella": [
+                "PER",
+                1
+            ],
+            "matteo renzi": [
+                "PER",
+                1
+            ],
+            "mattarella": [
+                "PER",
+                3
+            ],
+            "partido democrático": [
+                "ORG",
+                1
+            ],
+            "liga norte": [
+                "PER",
+                1
+            ],
+            "parlamento": [
+                "ORG",
+                2
+            ],
+            "unione sudamericana emigrati italiani": [
+                "ORG",
+                1
+            ],
+            "câmara": [
+                "ORG",
+                1
+            ],
+            "bueno": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        38,
+        "2016-09-12",
+        {
+            "justiça da holanda": [
+                "ORG",
+                1
+            ],
+            "geert wilders": [
+                "PER",
+                1
+            ],
+            "partido": [
+                "ORG",
+                1
+            ],
+            "vitória": [
+                "ORG",
+                1
+            ],
+            "wilders": [
+                "PER",
+                3
+            ],
+            "parlamento": [
+                "ORG",
+                1
+            ],
+            "mark rutte": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        39,
+        "2016-09-12",
+        {
+            "samsung electronics": [
+                "ORG",
+                1
+            ],
+            "tesla motors": [
+                "ORG",
+                1
+            ],
+            "electronic times": [
+                "ORG",
+                1
+            ],
+            "samsung": [
+                "ORG",
+                2
+            ],
+            "harman international industries": [
+                "ORG",
+                1
+            ],
+            "representantes de samsung": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        40,
+        "2016-09-12",
+        {
+            "hillary clinton": [
+                "PER",
+                1
+            ],
+            "hillary": [
+                "PER",
+                3
+            ],
+            "partido democrata": [
+                "ORG",
+                1
+            ],
+            "comet": [
+                "ORG",
+                1
+            ],
+            "buzzfeed ": [
+                "ORG",
+                1
+            ],
+            "donald trump": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        41,
+        "2016-09-12",
+        {
+            "petrobras": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        42,
+        "2016-09-12",
+        {
+            "pablo ferreyra": [
+                "PER",
+                1
+            ],
+            "frente para a": [
+                "ORG",
+                1
+            ],
+            "vitória": [
+                "ORG",
+                1
+            ],
+            "cristina kirchner": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        43,
+        "2016-09-12",
+        {
+            "pintec": [
+                "ORG",
+                1
+            ],
+            "alessandro pinheiro": [
+                "PER",
+                1
+            ],
+            "setores  ": [
+                "ORG",
+                1
+            ],
+            "eurostat": [
+                "ORG",
+                1
+            ],
+            "comissão europeia": [
+                "ORG",
+                1
+            ],
+            "modalidade": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        44,
+        "2016-09-12",
+        {
+            "iata": [
+                "ORG",
+                4
+            ],
+            "associação internacional de transporte aéreo": [
+                "ORG",
+                1
+            ],
+            "alexandre de juniac": [
+                "PER",
+                1
+            ],
+            "michael temer": [
+                "PER",
+                1
+            ],
+            "fabrício lobel": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        45,
+        "2016-09-12",
+        {
+            "politburo": [
+                "ORG",
+                1
+            ],
+            "partido comunista": [
+                "ORG",
+                1
+            ],
+            "xi jinping": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        46,
+        "2016-09-12",
+        {
+            "sandy hook": [
+                "PER",
+                4
+            ],
+            "noah": [
+                "PER",
+                1
+            ],
+            "cnn": [
+                "ORG",
+                1
+            ],
+            "len pozner": [
+                "PER",
+                1
+            ],
+            "honr": [
+                "PER",
+                1
+            ],
+            "pozner": [
+                "PER",
+                1
+            ],
+            "new york magazine": [
+                "ORG",
+                1
+            ],
+            "alex jones": [
+                "PER",
+                1
+            ],
+            "prince": [
+                "PER",
+                1
+            ],
+            "diana": [
+                "PER",
+                1
+            ],
+            "illuminati": [
+                "ORG",
+                1
+            ],
+            "batman": [
+                "PER",
+                1
+            ],
+            "cnn anderson cooper": [
+                "ORG",
+                1
+            ],
+            "cooper": [
+                "PER",
+                1
+            ],
+            "barack obama": [
+                "PER",
+                1
+            ],
+            "oxford": [
+                "ORG",
+                1
+            ],
+            "hillary clinton": [
+                "PER",
+                1
+            ],
+            "hillary": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        47,
+        "2016-09-12",
+        {
+            "park geun-hye": [
+                "PER",
+                1
+            ],
+            "parlamento": [
+                "ORG",
+                1
+            ],
+            "hwang kyo-ahn": [
+                "PER",
+                1
+            ],
+            "hwang": [
+                "PER",
+                1
+            ],
+            "roh moo-hyun": [
+                "PER",
+                1
+            ],
+            "dilma rousseff da presidência": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        48,
+        "2016-09-12",
+        {
+            "parlamento da coreia do sul": [
+                "ORG",
+                1
+            ],
+            "hwang kyo-ahn": [
+                "PER",
+                1
+            ],
+            "tribunal constitucional": [
+                "ORG",
+                1
+            ],
+            "hwang": [
+                "PER",
+                2
+            ],
+            "park": [
+                "PER",
+                2
+            ],
+            "parlamento": [
+                "ORG",
+                2
+            ],
+            "chung se-kyun": [
+                "PER",
+                1
+            ],
+            "chung": [
+                "PER",
+                1
+            ],
+            "park chung-hee": [
+                "PER",
+                2
+            ],
+            "choi soon-sil": [
+                "PER",
+                2
+            ],
+            "roh moo-hyun": [
+                "PER",
+                1
+            ],
+            "afastada": [
+                "PER",
+                1
+            ],
+            "quero": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        49,
+        "2016-09-12",
+        {
+            "parlamento da coreia do sul": [
+                "ORG",
+                1
+            ],
+            "park geun-hye": [
+                "PER",
+                1
+            ],
+            "constituição": [
+                "ORG",
+                1
+            ],
+            "park": [
+                "ORG",
+                3
+            ],
+            "ahn chong-bum": [
+                "PER",
+                1
+            ],
+            "choi soon-sil": [
+                "PER",
+                1
+            ],
+            "hyundai motor": [
+                "ORG",
+                1
+            ],
+            "ahn": [
+                "PER",
+                4
+            ],
+            "hyundai": [
+                "ORG",
+                2
+            ],
+            "choi": [
+                "PER",
+                14
+            ],
+            "chanel": [
+                "PER",
+                1
+            ],
+            "lotte": [
+                "ORG",
+                1
+            ],
+            "parlamento": [
+                "ORG",
+                1
+            ],
+            "chung ho-sung": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        50,
+        "2016-09-12",
+        {
+            "aojus": [
+                "PER",
+                3
+            ],
+            "associação dos oficiais de justiça do distrito federal": [
+                "ORG",
+                1
+            ],
+            "renan calheiros": [
+                "PER",
+                1
+            ],
+            "pmdb-al": [
+                "ORG",
+                1
+            ],
+            "marco aurélio": [
+                "PER",
+                1
+            ],
+            "wessel teles de oliveira": [
+                "PER",
+                1
+            ],
+            "mesa": [
+                "ORG",
+                1
+            ],
+            "jorge viana": [
+                "PER",
+                1
+            ],
+            "pt-ac": [
+                "PER",
+                1
+            ],
+            "vicentinho alves": [
+                "PER",
+                1
+            ],
+            "pr-to": [
+                "PER",
+                1
+            ],
+            "renan": [
+                "PER",
+                2
+            ],
+            "gerardo alves lima filho": [
+                "PER",
+                1
+            ],
+            "lima filho": [
+                "PER",
+                4
+            ],
+            "terezinha vieira de souza": [
+                "PER",
+                1
+            ],
+            "tribunal de justiça do df": [
+                "ORG",
+                1
+            ],
+            "francisco ladislau pereira neto": [
+                "PER",
+                1
+            ],
+            "tribunal regional do trabalho": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        51,
+        "2016-09-12",
+        {
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "temer": [
+                "PER",
+                4
+            ],
+            "henrique meirelles": [
+                "PER",
+                1
+            ],
+            "serasa experian": [
+                "ORG",
+                1
+            ],
+            "folha": [
+                "PER",
+                1
+            ],
+            "conselho curador do fgts": [
+                "ORG",
+                1
+            ],
+            "fundo": [
+                "ORG",
+                1
+            ],
+            "dilma rousseff": [
+                "PER",
+                1
+            ],
+            "meirelles": [
+                "PER",
+                1
+            ],
+            "geddel vieira lima": [
+                "PER",
+                1
+            ],
+            "judiciário": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        52,
+        "2016-09-12",
+        {
+            "antonio carlos pipponzi": [
+                "PER",
+                2
+            ],
+            "raia drogasil": [
+                "PER",
+                2
+            ],
+            "temer": [
+                "PER",
+                3
+            ],
+            "idv": [
+                "ORG",
+                2
+            ],
+            "instituto para desenvolvimento do varejo": [
+                "ORG",
+                2
+            ],
+            "henrique meirelles": [
+                "PER",
+                1
+            ],
+            "lava jato": [
+                "ORG",
+                1
+            ],
+            "previdência": [
+                "ORG",
+                1
+            ],
+            "geddel vieira lima": [
+                "PER",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "fundo patrimonial amigos da poli  ": [
+                "ORG",
+                1
+            ],
+            "poli-usp": [
+                "ORG",
+                1
+            ],
+            "eaesp": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        53,
+        "2016-09-12",
+        {
+            "marco aurélio mello": [
+                "PER",
+                1
+            ],
+            "dias toffolli": [
+                "PER",
+                1
+            ],
+            "gilmar mendes": [
+                "PER",
+                1
+            ],
+            "luiz fux": [
+                "PER",
+                1
+            ],
+            "constituição": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        54,
+        "2016-09-12",
+        {
+            "odebrecht": [
+                "ORG",
+                13
+            ],
+            "geraldo alckmin": [
+                "PER",
+                4
+            ],
+            "psdb": [
+                "ORG",
+                5
+            ],
+            "alckmin": [
+                "PER",
+                7
+            ],
+            "adhemar ribeiro": [
+                "PER",
+                2
+            ],
+            "lu alckmin": [
+                "PER",
+                1
+            ],
+            "aloizio mercadante": [
+                "PER",
+                1
+            ],
+            "pt": [
+                "ORG",
+                3
+            ],
+            "marcos monteiro": [
+                "PER",
+                2
+            ],
+            "mm": [
+                "ORG",
+                1
+            ],
+            "paulo skaf": [
+                "PER",
+                1
+            ],
+            "pmdb": [
+                "ORG",
+                2
+            ],
+            "carlos armando paschoal": [
+                "PER",
+                1
+            ],
+            "cap": [
+                "ORG",
+                2
+            ],
+            "lava jato": [
+                "ORG",
+                2
+            ],
+            "relações exteriores": [
+                "PER",
+                1
+            ],
+            "josé serra": [
+                "PER",
+                1
+            ],
+            "tribunal superior eleitoral": [
+                "ORG",
+                1
+            ],
+            "braskem": [
+                "ORG",
+                1
+            ],
+            "marcio pelegrino": [
+                "PER",
+                1
+            ],
+            "pelegrino": [
+                "PER",
+                1
+            ],
+            "marcelo odebrecht": [
+                "PER",
+                2
+            ],
+            "teori zavaski": [
+                "PER",
+                1
+            ],
+            "outro lado  ": [
+                "ORG",
+                1
+            ],
+            "folha": [
+                "PER",
+                1
+            ],
+            "psdb-sp": [
+                "ORG",
+                1
+            ],
+            "monteiro": [
+                "PER",
+                1
+            ],
+            "justiça eleitoral": [
+                "ORG",
+                1
+            ],
+            "justiça": [
+                "ORG",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "lula": [
+                "PER",
+                1
+            ],
+            "dilma rousseff": [
+                "PER",
+                1
+            ],
+            "relações exteriores josé serra": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        55,
+        "2016-09-12",
+        {
+            "tcu": [
+                "ORG",
+                2
+            ],
+            "tribunal de contas da união": [
+                "ORG",
+                1
+            ],
+            "raimundo carreiro": [
+                "PER",
+                1
+            ],
+            "josé múcio monteiro": [
+                "PER",
+                1
+            ],
+            "petrobras": [
+                "ORG",
+                1
+            ],
+            "ministério da indústria": [
+                "ORG",
+                1
+            ],
+            "comércio e serviços": [
+                "ORG",
+                1
+            ],
+            "margarete gandini": [
+                "PER",
+                1
+            ],
+            "anp": [
+                "ORG",
+                1
+            ],
+            "firjan": [
+                "ORG",
+                1
+            ],
+            "karine fragoso": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        56,
+        "2016-09-12",
+        {
+            "josé serra": [
+                "PER",
+                1
+            ],
+            "relações exteriores": [
+                "PER",
+                1
+            ],
+            "aécio neves": [
+                "PER",
+                1
+            ],
+            "psdb": [
+                "ORG",
+                5
+            ],
+            "geraldo alckmin": [
+                "PER",
+                1
+            ],
+            "joão doria": [
+                "PER",
+                1
+            ],
+            "aécio": [
+                "PER",
+                5
+            ],
+            "alckmin": [
+                "PER",
+                5
+            ],
+            "serra": [
+                "PER",
+                4
+            ],
+            "geraldo": [
+                "PER",
+                1
+            ],
+            "vanderlei macris": [
+                "PER",
+                1
+            ],
+            "psdb-sp": [
+                "ORG",
+                2
+            ],
+            "jutahy júnior": [
+                "PER",
+                2
+            ],
+            "marcus pestana": [
+                "PER",
+                1
+            ],
+            "psdb-mg": [
+                "ORG",
+                1
+            ],
+            "ricardo tripoli": [
+                "PER",
+                1
+            ],
+            "daniel coelho": [
+                "PER",
+                1
+            ],
+            "bruno covas": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        57,
+        "2016-09-12",
+        {
+            "barack obama": [
+                "PER",
+                1
+            ],
+            "donald trump": [
+                "PER",
+                2
+            ],
+            "andrew puzder": [
+                "PER",
+                2
+            ],
+            "trabalho": [
+                "ORG",
+                1
+            ],
+            "puzder": [
+                "PER",
+                3
+            ],
+            "obama": [
+                "PER",
+                3
+            ],
+            "assessor de trump": [
+                "PER",
+                1
+            ],
+            "trump": [
+                "PER",
+                4
+            ],
+            "scott pruitt": [
+                "PER",
+                1
+            ],
+            "agência de proteção ambiental": [
+                "ORG",
+                1
+            ],
+            "epa": [
+                "ORG",
+                2
+            ],
+            "pruitt": [
+                "PER",
+                2
+            ],
+            "sheldon whitehouse": [
+                "PER",
+                1
+            ],
+            "seth gladstone": [
+                "PER",
+                1
+            ],
+            "recontagem": [
+                "ORG",
+                1
+            ],
+            "partido verde": [
+                "ORG",
+                1
+            ],
+            "jill stein": [
+                "PER",
+                1
+            ],
+            "stein": [
+                "PER",
+                2
+            ],
+            "os três estados": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        58,
+        "2016-09-12",
+        {
+            "associação dos investidores minoritários": [
+                "ORG",
+                1
+            ],
+            "aidmin": [
+                "ORG",
+                1
+            ],
+            "oi": [
+                "ORG",
+                6
+            ],
+            "joão doria": [
+                "PER",
+                1
+            ],
+            "psdb": [
+                "ORG",
+                1
+            ],
+            "folha": [
+                "PER",
+                1
+            ],
+            "doria": [
+                "PER",
+                3
+            ],
+            "james meaney": [
+                "PER",
+                1
+            ],
+            "aurélio valporto": [
+                "PER",
+                1
+            ],
+            "luiz inácio lula da silva": [
+                "PER",
+                1
+            ],
+            "ivan zurita": [
+                "PER",
+                1
+            ],
+            "nestlé": [
+                "ORG",
+                1
+            ],
+            "nizan guanaes": [
+                "PER",
+                1
+            ],
+            "anatel": [
+                "ORG",
+                1
+            ],
+            "agência nacional de telecomunicações": [
+                "ORG",
+                1
+            ],
+            "juarez quadros": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        59,
+        "2016-08-12",
+        {
+            "carlos velloso": [
+                "PER",
+                1
+            ],
+            "marco aurélio": [
+                "PER",
+                3
+            ],
+            "renan calheiros": [
+                "PER",
+                1
+            ],
+            "pmdb-al": [
+                "ORG",
+                1
+            ],
+            "à folha velloso": [
+                "PER",
+                1
+            ],
+            "renan": [
+                "PER",
+                4
+            ],
+            "celso de mello": [
+                "PER",
+                1
+            ],
+            "constituição": [
+                "ORG",
+                1
+            ],
+            "câmara": [
+                "ORG",
+                1
+            ],
+            "executivo federal": [
+                "ORG",
+                1
+            ],
+            "dias toffoli": [
+                "PER",
+                1
+            ],
+            "velloso": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        60,
+        "2016-08-12",
+        {
+            "raul jungmann": [
+                "PER",
+                1
+            ],
+            "jungmann": [
+                "PER",
+                4
+            ],
+            "previdência": [
+                "ORG",
+                5
+            ],
+            "orçamento": [
+                "ORG",
+                1
+            ],
+            "agu": [
+                "ORG",
+                1
+            ],
+            "advocacia geral da união": [
+                "ORG",
+                1
+            ],
+            "regime próprio de previdência dos militares": [
+                "ORG",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "constituição": [
+                "ORG",
+                1
+            ],
+            "pec": [
+                "ORG",
+                3
+            ],
+            "forças armadas": [
+                "ORG",
+                1
+            ],
+            "inss": [
+                "ORG",
+                1
+            ],
+            "defesa": [
+                "PER",
+                1
+            ],
+            "sergio westphalen etchegoyen": [
+                "PER",
+                1
+            ],
+            "câmara": [
+                "ORG",
+                1
+            ],
+            "pm": [
+                "ORG",
+                1
+            ],
+            "eliseu padilha": [
+                "PER",
+                1
+            ],
+            "casa civil": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        61,
+        "2016-08-12",
+        {
+            "josé serra": [
+                "PER",
+                1
+            ],
+            "susana malcorra": [
+                "PER",
+                1
+            ],
+            "malcorra": [
+                "PER",
+                1
+            ],
+            "união europeia": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        62,
+        "2016-08-12",
+        {
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "antonio imbassahy": [
+                "PER",
+                1
+            ],
+            "psdb-ba": [
+                "ORG",
+                1
+            ],
+            "secretaria de governo": [
+                "ORG",
+                1
+            ],
+            "psd": [
+                "ORG",
+                1
+            ],
+            "pp": [
+                "ORG",
+                1
+            ],
+            "pr": [
+                "ORG",
+                1
+            ],
+            "ptb": [
+                "PER",
+                2
+            ],
+            "geddel vieira lima": [
+                "PER",
+                1
+            ],
+            "temer": [
+                "PER",
+                3
+            ],
+            "psdb": [
+                "ORG",
+                3
+            ],
+            "imbassahy": [
+                "PER",
+                2
+            ],
+            "aécio neves": [
+                "PER",
+                1
+            ],
+            "fernando henrique cardoso": [
+                "PER",
+                1
+            ],
+            "previdência": [
+                "ORG",
+                1
+            ],
+            "henrique meirelles": [
+                "PER",
+                1
+            ],
+            "jovair arantes": [
+                "PER",
+                1
+            ],
+            "go": [
+                "ORG",
+                1
+            ],
+            "rogério rosso": [
+                "PER",
+                1
+            ],
+            "aécio": [
+                "PER",
+                1
+            ],
+            "meirelles": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        63,
+        "2016-08-12",
+        {
+            "renan calheiros": [
+                "PER",
+                1
+            ],
+            "pmdb-al": [
+                "ORG",
+                1
+            ],
+            "bolsa": [
+                "ORG",
+                1
+            ],
+            "ricardo gomes da silva": [
+                "PER",
+                1
+            ],
+            "correparti corretora": [
+                "PER",
+                1
+            ],
+            "renan": [
+                "PER",
+                3
+            ],
+            "pec": [
+                "ORG",
+                2
+            ],
+            "bolsas": [
+                "ORG",
+                1
+            ],
+            "bce": [
+                "ORG",
+                2
+            ],
+            "banco central europeu": [
+                "ORG",
+                1
+            ],
+            "ibovespa": [
+                "ORG",
+                1
+            ],
+            "petrobras": [
+                "ORG",
+                1
+            ],
+            "vale": [
+                "ORG",
+                1
+            ],
+            "on": [
+                "ORG",
+                1
+            ],
+            "itaú unibanco pn": [
+                "ORG",
+                1
+            ],
+            "bradesco pn": [
+                "ORG",
+                1
+            ],
+            "bradesco on": [
+                "ORG",
+                1
+            ],
+            "banco do brasil on": [
+                "ORG",
+                1
+            ],
+            "bm&fbovespa on": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        64,
+        "2016-08-12",
+        {
+            "justiça": [
+                "ORG",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "fpm": [
+                "ORG",
+                1
+            ],
+            "fundo de participação dos municípios": [
+                "ORG",
+                1
+            ],
+            "fnp": [
+                "ORG",
+                1
+            ],
+            "frente nacional de prefeitos": [
+                "ORG",
+                1
+            ],
+            "rosa weber": [
+                "PER",
+                1
+            ],
+            "justiça federal": [
+                "ORG",
+                1
+            ],
+            "danielle macêdo peixoto de carvalho": [
+                "PER",
+                1
+            ],
+            "temer": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        65,
+        "2016-08-12",
+        {
+            "previdência": [
+                "ORG",
+                2
+            ],
+            "marcelo caetano": [
+                "PER",
+                1
+            ],
+            "caetano": [
+                "PER",
+                2
+            ],
+            "pec": [
+                "ORG",
+                3
+            ],
+            "proposta de emenda à constituição": [
+                "ORG",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "comissão de constituição de justiça": [
+                "ORG",
+                1
+            ],
+            "ccj": [
+                "ORG",
+                1
+            ],
+            "alceu moreira": [
+                "PER",
+                1
+            ],
+            "pmdb-rs": [
+                "ORG",
+                1
+            ],
+            "câmara": [
+                "ORG",
+                1
+            ],
+            "casa": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        66,
+        "2016-08-12",
+        {
+            "bce": [
+                "ORG",
+                11
+            ],
+            "banco central europeu": [
+                "ORG",
+                1
+            ],
+            "mario draghi": [
+                "ORG",
+                1
+            ],
+            "draghi": [
+                "ORG",
+                4
+            ],
+            "neil williams": [
+                "PER",
+                1
+            ],
+            "hermes asset management": [
+                "ORG",
+                1
+            ],
+            "peter chatwell": [
+                "PER",
+                1
+            ],
+            "união europeia": [
+                "ORG",
+                1
+            ],
+            "donald trump": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        67,
+        "2016-08-12",
+        {
+            "edson fachin": [
+                "PER",
+                1
+            ],
+            "pgr": [
+                "ORG",
+                3
+            ],
+            "renan calheiros": [
+                "PER",
+                2
+            ],
+            "pmdb-al": [
+                "ORG",
+                1
+            ],
+            "fachin": [
+                "ORG",
+                3
+            ],
+            "renan": [
+                "PER",
+                7
+            ],
+            "rodrigo janot": [
+                "PER",
+                1
+            ],
+            "câmara": [
+                "ORG",
+                1
+            ],
+            "marco aurélio mello": [
+                "PER",
+                1
+            ],
+            "marco aurélio": [
+                "PER",
+                1
+            ],
+            "janot": [
+                "PER",
+                3
+            ],
+            "constituição": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        68,
+        "2016-08-12",
+        {
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "temer": [
+                "PER",
+                3
+            ],
+            "fernando henrique cardoso": [
+                "PER",
+                1
+            ],
+            "luiz inácio lula da silva": [
+                "PER",
+                2
+            ]
+        }
+    ],
+    [
+        69,
+        "2016-08-12",
+        {
+            "fernando pimentel": [
+                "PER",
+                1
+            ],
+            "pt": [
+                "ORG",
+                1
+            ],
+            "assembleia legislativa": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        70,
+        "2016-08-12",
+        {
+            "união europeia": [
+                "ORG",
+                1
+            ],
+            "ue": [
+                "ORG",
+                5
+            ],
+            "kremlin": [
+                "PER",
+                1
+            ],
+            "petro poroshenko": [
+                "PER",
+                1
+            ],
+            "mikheil janelidze": [
+                "PER",
+                1
+            ],
+            "conselho europeu": [
+                "ORG",
+                1
+            ],
+            "donald tusk": [
+                "PER",
+                1
+            ],
+            "comissão europeia": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        71,
+        "2016-08-12",
+        {
+            "antônio imbassahy": [
+                "PER",
+                1
+            ],
+            "psdb-ba": [
+                "ORG",
+                1
+            ],
+            "secretário de governo": [
+                "ORG",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                4
+            ],
+            "comissão de constituição e justiça da câmara": [
+                "ORG",
+                1
+            ],
+            "ptb": [
+                "ORG",
+                2
+            ],
+            "jovair arantes": [
+                "PER",
+                1
+            ],
+            "go": [
+                "ORG",
+                1
+            ],
+            "psd": [
+                "ORG",
+                2
+            ],
+            "rogério rosso": [
+                "PER",
+                2
+            ],
+            "câmara": [
+                "ORG",
+                4
+            ],
+            "imbassahy": [
+                "PER",
+                2
+            ],
+            "paulinho da força": [
+                "PER",
+                1
+            ],
+            "sd-sp": [
+                "PER",
+                1
+            ],
+            "rodrigo maia": [
+                "PER",
+                2
+            ],
+            "dem-rj": [
+                "PER",
+                1
+            ],
+            "presidente da câmara": [
+                "PER",
+                1
+            ],
+            "temer": [
+                "PER",
+                4
+            ],
+            "dem": [
+                "ORG",
+                1
+            ],
+            "pmdb": [
+                "ORG",
+                1
+            ],
+            "pp": [
+                "ORG",
+                1
+            ],
+            "pr": [
+                "ORG",
+                1
+            ],
+            "jovair": [
+                "PER",
+                1
+            ],
+            "rosso": [
+                "PER",
+                1
+            ],
+            "secretaria de governo": [
+                "ORG",
+                3
+            ],
+            "psdb": [
+                "ORG",
+                6
+            ],
+            "lúcio vieira lima": [
+                "PER",
+                1
+            ],
+            "pmdb-ba": [
+                "PER",
+                1
+            ],
+            "geddel vieira lima": [
+                "PER",
+                1
+            ],
+            "psb": [
+                "ORG",
+                1
+            ],
+            "fernando bezerra coelho": [
+                "PER",
+                1
+            ],
+            "assegura": [
+                "ORG",
+                1
+            ],
+            "dilma rousseff": [
+                "PER",
+                1
+            ],
+            "poder": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        72,
+        "2016-08-12",
+        {
+            "luiz fernando pezão": [
+                "PER",
+                2
+            ],
+            "executivo": [
+                "ORG",
+                1
+            ],
+            "projetos": [
+                "ORG",
+                1
+            ],
+            "na pauta da alerj  ": [
+                "ORG",
+                1
+            ],
+            "carlos osório": [
+                "PER",
+                1
+            ],
+            "psdb": [
+                "ORG",
+                1
+            ],
+            "zaqueu teixeira": [
+                "PER",
+                1
+            ],
+            "pdt": [
+                "ORG",
+                1
+            ],
+            "pmdb": [
+                "PER",
+                1
+            ],
+            "pezão": [
+                "PER",
+                1
+            ],
+            "icms": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        73,
+        "2016-08-12",
+        {
+            "flaco marval": [
+                "PER",
+                2
+            ],
+            "flaco": [
+                "PER",
+                6
+            ],
+            "marval": [
+                "PER",
+                6
+            ],
+            "josé antonio garcía": [
+                "PER",
+                1
+            ],
+            "nicolás maduro": [
+                "PER",
+                1
+            ],
+            "alejandro grisanti": [
+                "PER",
+                1
+            ],
+            "barclays capital": [
+                "ORG",
+                1
+            ],
+            "deus": [
+                "PER",
+                1
+            ],
+            "edecio marval": [
+                "PER",
+                1
+            ],
+            "edecio": [
+                "PER",
+                2
+            ],
+            "el beta": [
+                "ORG",
+                3
+            ],
+            "tibisay marval": [
+                "PER",
+                1
+            ],
+            "hugo chávez": [
+                "PER",
+                1
+            ],
+            "fernando patino": [
+                "PER",
+                1
+            ],
+            "patino": [
+                "PER",
+                2
+            ],
+            "kalashnikov": [
+                "PER",
+                1
+            ],
+            "el beta?  ": [
+                "ORG",
+                1
+            ],
+            "luis morales": [
+                "PER",
+                1
+            ],
+            "petra marval": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        74,
+        "2016-08-12",
+        {
+            "comissão europeia": [
+                "ORG",
+                1
+            ],
+            "união europeia": [
+                "ORG",
+                4
+            ],
+            "alternativa": [
+                "PER",
+                1
+            ],
+            "frente nacional": [
+                "ORG",
+                1
+            ],
+            "dimitris avramopoulos": [
+                "PER",
+                1
+            ],
+            "angela merkel": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        75,
+        "2016-08-12",
+        {
+            "renan calheiros": [
+                "PER",
+                1
+            ],
+            "pmdb-al": [
+                "ORG",
+                1
+            ],
+            "marco aurélio mello": [
+                "PER",
+                1
+            ],
+            "folha": [
+                "PER",
+                1
+            ],
+            "renan": [
+                "PER",
+                4
+            ],
+            "marco aurélio": [
+                "PER",
+                5
+            ],
+            "constituição": [
+                "ORG",
+                1
+            ],
+            "celso de mello": [
+                "PER",
+                2
+            ]
+        }
+    ],
+    [
+        76,
+        "2016-08-12",
+        {
+            "renan calheiros": [
+                "PER",
+                1
+            ],
+            "pmdb-al": [
+                "ORG",
+                1
+            ],
+            "josé sarney": [
+                "PER",
+                1
+            ],
+            "pmdb": [
+                "PER",
+                2
+            ],
+            "marco aurélio mello": [
+                "PER",
+                1
+            ],
+            "renan": [
+                "PER",
+                7
+            ],
+            "sarney": [
+                "PER",
+                1
+            ],
+            "judiciário": [
+                "PER",
+                1
+            ],
+            "câmara": [
+                "ORG",
+                1
+            ],
+            "marco aurélio": [
+                "PER",
+                1
+            ],
+            "mesa diretora": [
+                "ORG",
+                1
+            ],
+            "jorge viana": [
+                "PER",
+                1
+            ],
+            "pt-ac": [
+                "PER",
+                1
+            ],
+            "casa": [
+                "PER",
+                1
+            ],
+            "renan filho": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        77,
+        "2016-08-12",
+        {
+            "mcdonald": [
+                "PER",
+                1
+            ],
+            "comissão europeia": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        78,
+        "2016-08-12",
+        {
+            "casa civil": [
+                "PER",
+                1
+            ],
+            "eliseu padilha": [
+                "PER",
+                2
+            ],
+            "pmdb": [
+                "PER",
+                2
+            ],
+            "edison lobão": [
+                "PER",
+                2
+            ],
+            "pmdb-ma": [
+                "ORG",
+                1
+            ],
+            "dilma rousseff": [
+                "PER",
+                1
+            ],
+            "padilha": [
+                "PER",
+                6
+            ],
+            "lobão": [
+                "PER",
+                7
+            ],
+            "secretaria de governo": [
+                "ORG",
+                1
+            ],
+            "geddel vieira lima": [
+                "PER",
+                1
+            ],
+            "geddel": [
+                "PER",
+                1
+            ],
+            "enerfin do brasil": [
+                "ORG",
+                1
+            ],
+            "girassol florestamento": [
+                "ORG",
+                1
+            ],
+            "elebrás projetos ltda": [
+                "ORG",
+                1
+            ],
+            "edusa s.a": [
+                "ORG",
+                2
+            ],
+            "enerfin": [
+                "ORG",
+                1
+            ],
+            "empresa de pesquisa energética": [
+                "ORG",
+                1
+            ],
+            "epe": [
+                "ORG",
+                4
+            ],
+            "sr. eliseu lemos padilha": [
+                "PER",
+                1
+            ],
+            "poder judiciário": [
+                "PER",
+                1
+            ],
+            "eliseu lemos padilha": [
+                "PER",
+                1
+            ],
+            "constituição federal": [
+                "ORG",
+                1
+            ],
+            "outro lado  ": [
+                "ORG",
+                1
+            ],
+            "antonio carlos de almeida castro": [
+                "PER",
+                1
+            ],
+            "enerfín do brasil": [
+                "ORG",
+                1
+            ],
+            "elecnor renováveis": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        79,
+        "2016-08-12",
+        {
+            "renan calheiros": [
+                "PER",
+                1
+            ],
+            "pmdb-al": [
+                "ORG",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "renan da presidência do senado": [
+                "PER",
+                1
+            ],
+            "pec": [
+                "ORG",
+                5
+            ],
+            "casa": [
+                "PER",
+                2
+            ],
+            "renan": [
+                "PER",
+                4
+            ],
+            "lindbergh farias": [
+                "PER",
+                1
+            ],
+            "pt-rj": [
+                "PER",
+                1
+            ],
+            "ronaldo caiado": [
+                "PER",
+                1
+            ],
+            "dem-go": [
+                "PER",
+                1
+            ],
+            "caiado": [
+                "PER",
+                1
+            ],
+            "dem": [
+                "ORG",
+                1
+            ],
+            "lindbergh": [
+                "PER",
+                1
+            ],
+            "temer": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        80,
+        "2016-08-12",
+        {
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "previdência": [
+                "ORG",
+                2
+            ],
+            "paulinho da força": [
+                "PER",
+                2
+            ],
+            "solidariedade": [
+                "PER",
+                1
+            ],
+            "força sindical": [
+                "ORG",
+                3
+            ],
+            "cut": [
+                "ORG",
+                3
+            ],
+            "ugt": [
+                "ORG",
+                1
+            ],
+            "conlutas": [
+                "ORG",
+                1
+            ],
+            "csb": [
+                "ORG",
+                1
+            ],
+            "cgtb": [
+                "ORG",
+                1
+            ],
+            "departamento intersindical de estatística e estudos socioeconômicos": [
+                "ORG",
+                1
+            ],
+            "clemente ganz lúcio": [
+                "PER",
+                1
+            ],
+            "força": [
+                "ORG",
+                1
+            ],
+            "pré-getúlio vargas": [
+                "PER",
+                1
+            ],
+            "sérgio nobre": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        81,
+        "2016-08-12",
+        {
+            "associação internacional de transporte aéreo": [
+                "ORG",
+                1
+            ],
+            "peter cerdá": [
+                "PER",
+                1
+            ],
+            "cerdá": [
+                "PER",
+                4
+            ],
+            "iata": [
+                "ORG",
+                2
+            ],
+            "icms": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        82,
+        "2016-08-12",
+        {
+            "marine le pen": [
+                "PER",
+                1
+            ],
+            "frente nacional": [
+                "ORG",
+                2
+            ],
+            "france presse": [
+                "ORG",
+                1
+            ],
+            "pen ": [
+                "PER",
+                1
+            ],
+            "le ": [
+                "PER",
+                1
+            ],
+            "françois fillon": [
+                "PER",
+                1
+            ],
+            "jean-marie le pen": [
+                "PER",
+                1
+            ],
+            "marine": [
+                "PER",
+                1
+            ],
+            "lionel jospin": [
+                "PER",
+                1
+            ],
+            "jacques chirac": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        83,
+        "2016-08-12",
+        {
+            "us geological survey": [
+                "ORG",
+                1
+            ],
+            "don hindley": [
+                "PER",
+                1
+            ],
+            "hindley": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        84,
+        "2016-08-12",
+        {
+            "renan calheiros": [
+                "PER",
+                1
+            ],
+            "pmdb-al": [
+                "ORG",
+                1
+            ],
+            "renan": [
+                "PER",
+                2
+            ],
+            "marco aurélio mello": [
+                "PER",
+                1
+            ],
+            "marco aurélio": [
+                "PER",
+                1
+            ],
+            "casa": [
+                "PER",
+                2
+            ]
+        }
+    ],
+    [
+        85,
+        "2016-08-12",
+        {
+            "dilma rousseff": [
+                "PER",
+                1
+            ],
+            "financial times": [
+                "ORG",
+                2
+            ],
+            "theresa may": [
+                "PER",
+                1
+            ],
+            "simone biles": [
+                "PER",
+                1
+            ],
+            "maria grazia chiuri": [
+                "PER",
+                1
+            ],
+            "beyoncé": [
+                "PER",
+                1
+            ],
+            "park geun-hye": [
+                "PER",
+                1
+            ],
+            "hillary clinton": [
+                "PER",
+                1
+            ],
+            "dilma": [
+                "PER",
+                2
+            ],
+            "joe leahy": [
+                "PER",
+                1
+            ],
+            "rousseff": [
+                "ORG",
+                1
+            ],
+            "tcu": [
+                "ORG",
+                1
+            ],
+            "petrobras": [
+                "ORG",
+                1
+            ],
+            "leahy": [
+                "PER",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        86,
+        "2016-08-12",
+        {
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "antônio imbassahy": [
+                "PER",
+                1
+            ],
+            "psdb-ba": [
+                "ORG",
+                1
+            ],
+            "secretaria de governo": [
+                "ORG",
+                2
+            ],
+            "geddel vieira lima": [
+                "PER",
+                2
+            ],
+            "imbassahy": [
+                "PER",
+                2
+            ],
+            "temer": [
+                "PER",
+                4
+            ],
+            "psdb": [
+                "ORG",
+                5
+            ],
+            "fernando henrique cardoso": [
+                "PER",
+                1
+            ],
+            "aécio neves": [
+                "PER",
+                1
+            ],
+            "renan calheiros": [
+                "PER",
+                1
+            ],
+            "pmdb-al": [
+                "ORG",
+                1
+            ],
+            "pmdb": [
+                "ORG",
+                1
+            ],
+            "câmara": [
+                "ORG",
+                1
+            ],
+            "fhc": [
+                "PER",
+                1
+            ],
+            "beto richa": [
+                "PER",
+                1
+            ],
+            "marconi perillo": [
+                "PER",
+                1
+            ],
+            "bruno araújo": [
+                "PER",
+                1
+            ],
+            "cidades": [
+                "PER",
+                1
+            ],
+            "eliseu padilha": [
+                "PER",
+                1
+            ],
+            "casa civil": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        87,
+        "2016-08-12",
+        {
+            "pt": [
+                "ORG",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "geddel vieira lima": [
+                "PER",
+                1
+            ],
+            "movimento dos trabalhadores rurais sem terra": [
+                "ORG",
+                1
+            ],
+            "une": [
+                "ORG",
+                1
+            ],
+            "união nacional dos estudantes": [
+                "ORG",
+                1
+            ],
+            "cut": [
+                "ORG",
+                3
+            ],
+            "central única dos trabalhadores": [
+                "ORG",
+                1
+            ],
+            "câmara": [
+                "ORG",
+                1
+            ],
+            "casa": [
+                "PER",
+                1
+            ],
+            "rodrigo maia": [
+                "PER",
+                1
+            ],
+            "dem-rj": [
+                "PER",
+                1
+            ],
+            "temer": [
+                "PER",
+                4
+            ],
+            "democratas": [
+                "ORG",
+                1
+            ],
+            "wagner soares padilha": [
+                "PER",
+                1
+            ],
+            "vagner freitas": [
+                "PER",
+                1
+            ],
+            "mesa da câmara": [
+                "ORG",
+                1
+            ],
+            "henrique fontana": [
+                "PER",
+                1
+            ],
+            "pt-rs": [
+                "PER",
+                1
+            ],
+            "marcelo calero": [
+                "PER",
+                1
+            ],
+            "geddel": [
+                "PER",
+                2
+            ],
+            "calero": [
+                "PER",
+                4
+            ],
+            "constituição": [
+                "ORG",
+                1
+            ],
+            "folha": [
+                "PER",
+                1
+            ],
+            "psol": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        88,
+        "2016-08-12",
+        {
+            "jorgen vig knudstorp": [
+                "PER",
+                1
+            ],
+            "niels jacobsen": [
+                "PER",
+                1
+            ],
+            "bali padda": [
+                "PER",
+                1
+            ],
+            "lego brand group": [
+                "ORG",
+                3
+            ],
+            "lego": [
+                "ORG",
+                1
+            ],
+            "thomas kirk kristensen": [
+                "PER",
+                1
+            ],
+            "knudstorp": [
+                "PER",
+                1
+            ],
+            "kristensen": [
+                "PER",
+                3
+            ],
+            "merlin entertainments": [
+                "ORG",
+                1
+            ],
+            "lego education": [
+                "ORG",
+                2
+            ],
+            "fundação lego": [
+                "ORG",
+                1
+            ],
+            "financial times": [
+                "ORG",
+                1
+            ],
+            "padda": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        89,
+        "2016-08-12",
+        {
+            "donald trump": [
+                "PER",
+                1
+            ],
+            "agência de proteção ambiental": [
+                "ORG",
+                1
+            ],
+            "epa": [
+                "ORG",
+                5
+            ],
+            "scott pruitt": [
+                "PER",
+                1
+            ],
+            "pruitt": [
+                "PER",
+                5
+            ],
+            "trump": [
+                "PER",
+                3
+            ],
+            "al gore": [
+                "PER",
+                1
+            ],
+            "new york times": [
+                "ORG",
+                1
+            ],
+            "bernie sanders": [
+                "PER",
+                1
+            ],
+            "partido democrata": [
+                "ORG",
+                1
+            ],
+            "barack obama": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        90,
+        "2016-08-12",
+        {
+            "força sindical paulinho da força": [
+                "ORG",
+                1
+            ],
+            "previdência": [
+                "ORG",
+                2
+            ],
+            "paulinho": [
+                "PER",
+                1
+            ],
+            "inss": [
+                "ORG",
+                2
+            ]
+        }
+    ],
+    [
+        91,
+        "2016-08-12",
+        {
+            "opep": [
+                "ORG",
+                5
+            ],
+            "organização dos países exportadores de petróleo": [
+                "ORG",
+                1
+            ],
+            "reuters": [
+                "ORG",
+                2
+            ],
+            "thomson reuters oil research and forecasts": [
+                "ORG",
+                1
+            ],
+            "shakil begg": [
+                "PER",
+                1
+            ],
+            "brent": [
+                "ORG",
+                2
+            ],
+            "goldman sachs": [
+                "PER",
+                1
+            ],
+            "crisil research": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        92,
+        "2016-08-12",
+        {
+            "dyogo oliveira": [
+                "PER",
+                1
+            ],
+            "constituição": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        93,
+        "2016-08-12",
+        {
+            "receita federal": [
+                "ORG",
+                1
+            ],
+            "receita": [
+                "ORG",
+                5
+            ],
+            "cpf": [
+                "ORG",
+                2
+            ],
+            "banco do brasil": [
+                "ORG",
+                1
+            ],
+            "selic": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        94,
+        "2016-08-12",
+        {
+            "airbnb": [
+                "ORG",
+                6
+            ],
+            "brian chesky": [
+                "PER",
+                1
+            ],
+            "chesky": [
+                "PER",
+                1
+            ],
+            "reuters": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        95,
+        "2016-08-12",
+        {
+            "banco central europeu": [
+                "ORG",
+                1
+            ],
+            "bce": [
+                "ORG",
+                8
+            ],
+            "mario draghi": [
+                "ORG",
+                1
+            ],
+            "draghi": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        96,
+        "2016-08-12",
+        {
+            "forças armadas": [
+                "ORG",
+                4
+            ],
+            "previdência": [
+                "ORG",
+                3
+            ],
+            "marcelo caetano": [
+                "PER",
+                1
+            ],
+            "bbc brasil": [
+                "ORG",
+                1
+            ],
+            "paulo frederico soriano dobbin": [
+                "PER",
+                1
+            ],
+            "clube naval": [
+                "ORG",
+                1
+            ],
+            "dobbin": [
+                "PER",
+                1
+            ],
+            "luis eduardo afonso": [
+                "PER",
+                2
+            ],
+            "faculdade de economia": [
+                "ORG",
+                1
+            ],
+            "administração e contabilidade da usp": [
+                "ORG",
+                1
+            ],
+            "josé roberto savoia": [
+                "PER",
+                1
+            ],
+            "executivo": [
+                "ORG",
+                2
+            ],
+            "legislativo": [
+                "ORG",
+                1
+            ],
+            "jorge félix": [
+                "PER",
+                1
+            ],
+            "temer": [
+                "PER",
+                1
+            ],
+            "jair": [
+                "PER",
+                1
+            ],
+            "michel temer": [
+                "PER",
+                1
+            ],
+            "inss": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        97,
+        "2016-08-12",
+        {
+            "ericsson": [
+                "PER",
+                3
+            ],
+            "huawei": [
+                "ORG",
+                1
+            ],
+            "nokia": [
+                "ORG",
+                1
+            ]
+        }
+    ],
+    [
+        98,
+        "2016-08-12",
+        {
+            "partido verde": [
+                "ORG",
+                1
+            ],
+            "jill stein": [
+                "PER",
+                1
+            ],
+            "donald trump": [
+                "PER",
+                1
+            ],
+            "mark goldsmith": [
+                "PER",
+                1
+            ],
+            "tribunal de apelações de michigan": [
+                "ORG",
+                1
+            ],
+            "tribunal de apelações do 6º circuito dos eua": [
+                "ORG",
+                1
+            ],
+            "goldsmith": [
+                "PER",
+                2
+            ],
+            "stein": [
+                "PER",
+                4
+            ],
+            "bill schuette": [
+                "PER",
+                1
+            ],
+            "hillary clinton": [
+                "PER",
+                1
+            ]
+        }
+    ],
+    [
+        99,
+        "2016-08-12",
+        {
+            "bashar al-assad": [
+                "PER",
+                1
+            ],
+            "sergei lavrov": [
+                "PER",
+                1
+            ],
+            "lavrov": [
+                "PER",
+                1
+            ],
+            "john kerry": [
+                "PER",
+                1
+            ],
+            "forças armadas da síria": [
+                "ORG",
+                1
+            ],
+            "exército sírio": [
+                "ORG",
+                1
+            ]
+        }
+    ]
+]

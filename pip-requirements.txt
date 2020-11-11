@@ -1,0 +1,10 @@
+wheel
+jupyterlab
+pandas
+matplotlib
+sklearn
+django
+gensim
+spacy
+igraph
+python-igraph
