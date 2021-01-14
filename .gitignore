@@ -5,6 +5,7 @@ amb
 *doc2vec.*
 distancias
 *.tar.gz
+#rede_entidades/preproc
 
 # Django #
 *.log

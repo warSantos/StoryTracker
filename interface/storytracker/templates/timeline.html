@@ -10,6 +10,30 @@
 {% block scripts %}
 <!-- Coloque seus scripts aqui. -->
 <script type="text/javascript">
-    timeline = new TL.Timeline('timeline-embed', "{% static 'json/timeline-teste.json' %}");
+
+    //var documentos = "{% static 'json/timeline-teste.json' %}"
+    var documentos = {{ documentos | safe }};
+
+    var slide_inicial = documentos.shift();
+    var options = {
+        start_at_slide: slide_inicial,
+        timenav_height_percentage: 15
+    }
+    timeline = new TL.Timeline('timeline-embed', documentos[0], options);
+    var datas = document.getElementsByClassName('tl-headline-date');
+    // Configurando a cor e tamanho da fontes das datas de cada página.
+    for (var i = 0; i < datas.length; i++) {
+        datas[i].style.color = 'black';
+        datas[i].style.fontSize = "20px";
+        datas[i].classList.add("p-2");
+    }
+    // Ajustando o tamanho do contet-slide.
+    //<div class="tl-slide-content" style="padding-left: 0px; padding-right: 0px; width: 100%;">datas[i].</div>
+    var slides = document.getElementsByClassName('tl-slide-content');
+    for (var i = 0; i < slides.length; i++){
+        slides[i].style.paddingLeft = "75px";
+        slides[i].style.paddingRight = "0px";
+        slides[i].style.width = "100%";
+    }
 </script>
 {% endblock %}

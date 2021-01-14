@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Story Tracker - Documentation {% endblock %}
+
+{% block content %}
+
+<div class="w-75 p-4">
+    <h3> Configuração de Parâmetros </h3>
+    <p>
+        <b>Title x Text Importance:</b> este parâmetro varia no intervalo [0,1]. Este parâmetro equilibra a pesquisa por
+        páginas entre o termos pesquisados com o título e o texto dos documentos. O valor padão atribui total
+        importância para o texto dos documentos, valor 1.
+    </p>
+    <p>
+        <b> Months:</b> este parâmetro define o ráio de pesquisa em mêses para um ponto no tempo. Supondo que a data
+        inserida seja 2016-04-01, com raio de 3 mêses, a linha do tempo será construída a partir de 3 da data inserida e
+        até 3 mêses após a data inserida, 2016-01-01 á 2016-06-31, respectivamente.
+    </p>
+</div>
+
+<nav aria-label="...">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="/timeline">Previous</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+{% endblock %}
+{% block scripts %}
+<!-- Coloque seus scripts aqui. -->
+
+{% endblock %}
