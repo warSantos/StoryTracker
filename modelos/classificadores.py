@@ -17,7 +17,7 @@ class Classificador():
 
     def salvar_scores(self, scores, label):
 
-        pt = open('d2v_clfs/random_'+label+'.txt', 'w')
+        pt = open('d2v_clfs/pvdm_random_'+label+'.txt', 'w')
         for score in scores:
             pt.write(str(score)+'\n')
         pt.close()

@@ -44,7 +44,7 @@ class Modelo():
 
     def gerar_modelos(self, dataset, atributo, prefixo='classificados_'):
 
-        dimensoes = [100]
+        dimensoes = [15, 50]
         tipos = [0, 1]
         epocas = [10]
         documentos = self.pre_proc(dataset, atributo)
